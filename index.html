@@ -3,537 +3,280 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>ProjektorBloggen – Allt om projektorer, hemmabio och storbild</title>
-<meta name="description" content="Oberoende blogg om projektorer. Tester, guider, tips och recensioner för dig som vill ha storbild hemma."/>
+<title>ProjektorBloggen – Guider, tester och tips om projektorer</title>
+<meta name="description" content="Oberoende blogg om projektorer. Guider, recensioner och tips för dig som vill ha storbild hemma."/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
 body{background:#fff;color:#1a1a1a;font-family:'Inter',sans-serif;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
 
 /* NAV */
-nav{border-bottom:1px solid #e8e8e8;padding:0 2rem;height:64px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;background:#fff;z-index:100}
-.nav-brand{text-decoration:none}
-.nav-brand h1{font-family:'Lora',serif;font-size:1.4rem;font-weight:600;color:#1a1a1a;letter-spacing:-0.01em}
-.nav-brand span{color:#e85d26}
-.nav-cats{display:flex;gap:1.5rem;list-style:none}
-.nav-cats a{color:#666;text-decoration:none;font-size:0.85rem;font-weight:500;transition:color 0.2s}
+nav{border-bottom:1px solid #ebebeb;height:62px;display:flex;align-items:center;justify-content:space-between;padding:0 2rem;position:sticky;top:0;background:#fff;z-index:100}
+.brand{font-family:'Lora',serif;font-size:1.35rem;font-weight:600;color:#1a1a1a;text-decoration:none}
+.brand span{color:#e05c2a}
+.nav-cats{display:flex;gap:1.8rem;list-style:none}
+.nav-cats a{font-size:0.83rem;font-weight:500;color:#777;text-decoration:none;transition:color .2s}
 .nav-cats a:hover{color:#1a1a1a}
 
-/* HERO */
-.hero{background:#fafaf8;border-bottom:1px solid #e8e8e8;padding:3.5rem 2rem}
-.hero-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1.4fr 1fr;gap:3rem;align-items:center}
-.hero-tag{font-size:0.72rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#e85d26;margin-bottom:0.8rem}
-.hero-inner h2{font-family:'Lora',serif;font-size:clamp(1.8rem,3vw,2.6rem);font-weight:600;line-height:1.25;color:#1a1a1a;margin-bottom:1rem;letter-spacing:-0.02em}
-.hero-inner p{color:#555;font-size:0.97rem;line-height:1.75;margin-bottom:1.5rem}
-.hero-meta{display:flex;align-items:center;gap:1rem;font-size:0.8rem;color:#999}
-.hero-meta .dot{width:3px;height:3px;border-radius:50%;background:#ccc}
-.hero-cat-pill{background:#fff3ee;color:#e85d26;font-size:0.7rem;font-weight:600;padding:0.2rem 0.6rem;border-radius:100px;text-transform:uppercase;letter-spacing:0.08em}
-.hero-read{display:inline-block;margin-top:1.5rem;background:#1a1a1a;color:#fff;padding:0.65rem 1.5rem;border-radius:6px;font-size:0.85rem;font-weight:600;text-decoration:none;transition:background 0.2s}
-.hero-read:hover{background:#333}
-.hero-img{background:#e8e8e2;border-radius:10px;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;overflow:hidden}
-.hero-img-placeholder{font-size:0.8rem;color:#bbb;letter-spacing:0.04em}
+/* HERO POST */
+.hero{max-width:1060px;margin:0 auto;padding:3rem 2rem 2rem}
+.hero-inner{display:grid;grid-template-columns:1fr 380px;gap:3rem;align-items:center;border-bottom:1px solid #ebebeb;padding-bottom:3rem}
+.hero-label{font-size:0.68rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#e05c2a;margin-bottom:.7rem}
+.hero h2{font-family:'Lora',serif;font-size:2.1rem;font-weight:600;line-height:1.25;letter-spacing:-.02em;margin-bottom:.9rem}
+.hero p{font-size:.95rem;color:#555;line-height:1.75;margin-bottom:1.2rem}
+.hero-meta{font-size:.78rem;color:#aaa;display:flex;gap:.8rem;align-items:center}
+.dot{width:3px;height:3px;border-radius:50%;background:#ddd}
+.hero-img{background:#ede9e3;border-radius:10px;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;font-size:.75rem;color:#ccc}
 
-/* MAIN LAYOUT */
-.main{max-width:1100px;margin:0 auto;padding:3rem 2rem;display:grid;grid-template-columns:1fr 300px;gap:4rem}
+/* FILTER */
+.wrap{max-width:1060px;margin:0 auto;padding:0 2rem}
+.filters{display:flex;gap:.5rem;padding:2rem 0 1.5rem;flex-wrap:wrap}
+.f{background:none;border:1px solid #e0e0e0;color:#666;font-size:.78rem;font-weight:500;padding:.32rem .9rem;border-radius:100px;cursor:pointer;font-family:'Inter',sans-serif;transition:all .2s}
+.f:hover{border-color:#1a1a1a;color:#1a1a1a}
+.f.on{background:#1a1a1a;color:#fff;border-color:#1a1a1a}
 
-/* POSTS GRID */
-.posts-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:2rem;padding-bottom:1rem;border-bottom:1px solid #e8e8e8}
-.posts-header h3{font-family:'Lora',serif;font-size:1.2rem;font-weight:600;color:#1a1a1a}
-.filter-tabs{display:flex;gap:0.5rem}
-.ftab{background:none;border:1px solid #e8e8e8;color:#666;font-size:0.78rem;font-weight:500;padding:0.3rem 0.85rem;border-radius:100px;cursor:pointer;transition:all 0.2s;font-family:'Inter',sans-serif}
-.ftab:hover{border-color:#1a1a1a;color:#1a1a1a}
-.ftab.active{background:#1a1a1a;color:#fff;border-color:#1a1a1a}
+/* GRID */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;padding-bottom:4rem}
 
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:1.8rem}
-.card{text-decoration:none;color:inherit;display:flex;flex-direction:column;border:1px solid #ebebeb;border-radius:10px;overflow:hidden;transition:box-shadow 0.2s,transform 0.2s;background:#fff}
-.card:hover{box-shadow:0 4px 20px rgba(0,0,0,0.07);transform:translateY(-2px)}
-.card-img{background:#f0ede8;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;font-size:0.75rem;color:#bbb;letter-spacing:0.04em;flex-shrink:0}
-.card-img.tech{background:#e8edf5}
-.card-img.review{background:#f5ebe8}
-.card-img.guide{background:#e8f5ee}
-.card-img.tips{background:#f5f0e8}
-.card-body{padding:1.2rem;display:flex;flex-direction:column;flex:1}
-.card-pill{display:inline-block;font-size:0.65rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;padding:0.18rem 0.6rem;border-radius:100px;margin-bottom:0.7rem;align-self:flex-start}
-.pill-guide{background:#e8f5ee;color:#2d7a4f}
-.pill-review{background:#fff3ee;color:#e85d26}
-.pill-tips{background:#fdf6e8;color:#a0720a}
-.pill-tech{background:#eef2ff;color:#4361c2}
-.pill-jmf{background:#f8eeff;color:#7c3aed}
-.card-title{font-family:'Lora',serif;font-size:1rem;font-weight:600;line-height:1.4;color:#1a1a1a;margin-bottom:0.5rem}
-.card-excerpt{font-size:0.83rem;color:#666;line-height:1.65;flex:1}
-.card-foot{display:flex;align-items:center;justify-content:space-between;margin-top:1rem;padding-top:0.8rem;border-top:1px solid #f0f0f0;font-size:0.75rem;color:#aaa}
-.card-author{display:flex;align-items:center;gap:0.5rem}
-.av{width:24px;height:24px;border-radius:50%;background:#e0ddd8;display:flex;align-items:center;justify-content:center;font-size:0.65rem;font-weight:600;color:#888}
+.card{text-decoration:none;color:inherit;display:flex;flex-direction:column;border-bottom:1px solid #ebebeb;padding-bottom:1.8rem}
+.card-img{border-radius:8px;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;font-size:.72rem;color:#ccc;margin-bottom:1rem;flex-shrink:0}
+.ci-guide{background:#eef5ee}
+.ci-review{background:#fdf0ea}
+.ci-tips{background:#fdf8ee}
+.ci-tech{background:#eef1fb}
+.ci-jmf{background:#f5eeff}
 
-/* FEATURED WIDE */
-.card-wide{grid-column:1/-1;flex-direction:row}
-.card-wide .card-img{aspect-ratio:auto;width:280px;flex-shrink:0}
-.card-wide .card-body{padding:1.8rem}
-.card-wide .card-title{font-size:1.2rem}
-.card-wide .card-excerpt{font-size:0.9rem}
+.pill{display:inline-block;font-size:.65rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:.18rem .6rem;border-radius:100px;margin-bottom:.6rem}
+.p-guide{background:#e6f4ea;color:#2a7a48}
+.p-review{background:#fdeee6;color:#c94f1c}
+.p-tips{background:#fdf5e0;color:#9a6f0a}
+.p-tech{background:#edf0fc;color:#3d5cc0}
+.p-jmf{background:#f3eaff;color:#7030c4}
 
-/* SIDEBAR */
-aside{padding-top:0}
-.sidebar-block{margin-bottom:2.5rem}
-.sb-title{font-size:0.72rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#999;margin-bottom:1.2rem;padding-bottom:0.6rem;border-bottom:1px solid #e8e8e8}
-.sb-list{list-style:none}
-.sb-list li{border-bottom:1px solid #f0f0f0}
-.sb-list a{display:flex;gap:0.8rem;align-items:flex-start;padding:0.8rem 0;text-decoration:none;transition:color 0.2s}
-.sb-list a:hover .sb-link-title{color:#e85d26}
-.sb-num{font-size:1.2rem;font-weight:700;color:#e8e8e0;flex-shrink:0;line-height:1.3;font-family:'Lora',serif}
-.sb-link-title{font-size:0.85rem;font-weight:500;color:#333;line-height:1.4}
-.sb-link-meta{font-size:0.72rem;color:#aaa;margin-top:0.2rem}
-.tag-cloud{display:flex;flex-wrap:wrap;gap:0.5rem}
-.tag{background:#f5f5f3;color:#555;font-size:0.78rem;padding:0.3rem 0.75rem;border-radius:100px;text-decoration:none;border:1px solid #ebebeb;transition:all 0.2s}
-.tag:hover{background:#1a1a1a;color:#fff;border-color:#1a1a1a}
-.about-box{background:#fafaf8;border:1px solid #e8e8e8;border-radius:10px;padding:1.5rem;text-align:center}
-.about-box p{font-size:0.85rem;color:#666;line-height:1.6;margin-top:0.8rem}
-
-/* NEWSLETTER */
-.newsletter{background:#fafaf8;border:1px solid #e8e8e8;border-radius:10px;padding:1.5rem}
-.newsletter h4{font-family:'Lora',serif;font-size:1rem;font-weight:600;margin-bottom:0.4rem}
-.newsletter p{font-size:0.82rem;color:#666;margin-bottom:1rem;line-height:1.5}
-.nl-form{display:flex;flex-direction:column;gap:0.5rem}
-.nl-form input{border:1px solid #e8e8e8;border-radius:6px;padding:0.55rem 0.8rem;font-size:0.85rem;font-family:'Inter',sans-serif;outline:none;transition:border-color 0.2s}
-.nl-form input:focus{border-color:#1a1a1a}
-.nl-form button{background:#1a1a1a;color:#fff;border:none;border-radius:6px;padding:0.6rem;font-size:0.85rem;font-weight:600;cursor:pointer;font-family:'Inter',sans-serif;transition:background 0.2s}
-.nl-form button:hover{background:#333}
-
-/* PAGINATION */
-.pagination{display:flex;justify-content:center;align-items:center;gap:0.5rem;margin-top:3rem;padding-top:2rem;border-top:1px solid #e8e8e8}
-.pg{background:none;border:1px solid #e8e8e8;color:#555;font-size:0.85rem;font-weight:500;width:36px;height:36px;border-radius:6px;cursor:pointer;display:flex;align-items:center;justify-content:center;font-family:'Inter',sans-serif;transition:all 0.2s}
-.pg:hover{border-color:#1a1a1a;color:#1a1a1a}
-.pg.active{background:#1a1a1a;color:#fff;border-color:#1a1a1a}
-.pg-dots{color:#ccc;font-size:0.85rem;padding:0 0.3rem}
+.card-title{font-family:'Lora',serif;font-size:1.02rem;font-weight:600;line-height:1.4;color:#1a1a1a;margin-bottom:.45rem}
+.card-excerpt{font-size:.83rem;color:#666;line-height:1.65;flex:1}
+.card-foot{display:flex;justify-content:space-between;align-items:center;margin-top:.9rem;font-size:.73rem;color:#bbb}
+.card-author{display:flex;align-items:center;gap:.45rem}
+.av{width:22px;height:22px;border-radius:50%;background:#e5e2dd;display:flex;align-items:center;justify-content:center;font-size:.6rem;font-weight:600;color:#999}
 
 /* FOOTER */
-footer{background:#fafaf8;border-top:1px solid #e8e8e8;padding:2.5rem 2rem;margin-top:2rem}
-.foot-inner{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
-.foot-brand{font-family:'Lora',serif;font-size:1rem;font-weight:600;color:#aaa}
-.foot-brand span{color:#e85d26}
-footer p{font-size:0.78rem;color:#bbb}
-.foot-links{display:flex;gap:1.5rem}
-.foot-links a{color:#aaa;text-decoration:none;font-size:0.8rem;transition:color 0.2s}
-.foot-links a:hover{color:#1a1a1a}
+footer{border-top:1px solid #ebebeb;padding:2rem;text-align:center}
+footer p{font-size:.8rem;color:#bbb}
+.foot-brand{font-family:'Lora',serif;font-size:1rem;font-weight:600;color:#ccc;margin-bottom:.3rem}
+.foot-brand span{color:#e05c2a}
 
-@media(max-width:900px){
+@media(max-width:860px){
   .hero-inner{grid-template-columns:1fr}.hero-img{display:none}
-  .main{grid-template-columns:1fr}
-  aside{display:none}
-  .card-wide{flex-direction:column}.card-wide .card-img{width:100%;aspect-ratio:16/9}
+  .grid{grid-template-columns:1fr 1fr}
   .nav-cats{display:none}
 }
-@media(max-width:600px){
-  .grid{grid-template-columns:1fr}
-  .card-wide{grid-column:auto}
-}
+@media(max-width:540px){.grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 
 <nav>
-  <a class="nav-brand" href="index.html">
-    <h1>Projektor<span>Bloggen</span></h1>
-  </a>
+  <a class="brand" href="#">Projektor<span>Bloggen</span></a>
   <ul class="nav-cats">
     <li><a href="#">Guider</a></li>
     <li><a href="#">Recensioner</a></li>
     <li><a href="#">Tips & tricks</a></li>
     <li><a href="#">Jämförelser</a></li>
-    <li><a href="#">Hemmabio</a></li>
   </ul>
 </nav>
 
-<!-- HERO / FEATURED POST -->
+<!-- FEATURED -->
 <div class="hero">
   <div class="hero-inner">
     <div>
-      <div class="hero-tag">Veckans guide</div>
+      <div class="hero-label">Veckans artikel</div>
       <h2>Varför en projektor slår TV:n — 7 skäl att byta i år</h2>
-      <p>Moderna projektorer ger upp till 150 tums bild till en bråkdel av kostnaden för en stor TV. Vi reder ut varför allt fler svenska hushåll väljer att byta ut skärmen mot en duk.</p>
+      <p>Moderna projektorer ger upp till 150 tums bild till en bråkdel av kostnaden för en stor-TV. Vi reder ut varför allt fler svenska hushåll väljer att byta ut skärmen mot en duk.</p>
       <div class="hero-meta">
-        <span class="hero-cat-pill">Guide</span>
-        <span class="dot"></span>
-        <span>15 min läsning</span>
-        <span class="dot"></span>
+        <span>Guide</span><span class="dot"></span>
+        <span>15 min läsning</span><span class="dot"></span>
         <span>12 jan 2026</span>
       </div>
-      <a class="hero-read" href="artikel-varfor-projektor.html">Läs artikeln →</a>
     </div>
-    <div class="hero-img">
-      <span class="hero-img-placeholder">[ Omslagsbild ]</span>
-    </div>
+    <div class="hero-img">[ Omslagsbild ]</div>
   </div>
 </div>
 
-<div class="main">
-  <!-- POSTS -->
-  <main>
-    <div class="posts-header">
-      <h3>Senaste artiklarna</h3>
-      <div class="filter-tabs">
-        <button class="ftab active">Alla</button>
-        <button class="ftab">Guider</button>
-        <button class="ftab">Recensioner</button>
-        <button class="ftab">Tips</button>
-      </div>
-    </div>
+<!-- POSTS -->
+<div class="wrap">
+  <div class="filters">
+    <button class="f on" onclick="filter('all',this)">Alla</button>
+    <button class="f" onclick="filter('guide',this)">Guider</button>
+    <button class="f" onclick="filter('review',this)">Recensioner</button>
+    <button class="f" onclick="filter('tips',this)">Tips</button>
+    <button class="f" onclick="filter('tech',this)">Teknik</button>
+    <button class="f" onclick="filter('jmf',this)">Jämförelser</button>
+  </div>
 
-    <div class="grid">
+  <div class="grid" id="grid">
 
-      <!-- WIDE FEATURED -->
-      <a class="card card-wide" href="artikel-minilux-pro-recension.html">
-        <div class="card-img review" style="width:280px;flex-shrink:0">[ Bild ]</div>
-        <div class="card-body">
-          <span class="card-pill pill-review">Recension</span>
-          <div class="card-title">MiniLux Pro — vi testade den i 4 veckor. Här är vår ärliga dom.</div>
-          <p class="card-excerpt">En kompakt projektor som imponerar med autofokus, WiFi 6 och roterbar fot. Men lever den upp till hypen? Vi gick igenom allt från bildkvalitet till batteritid i vår mest detaljerade test hittills.</p>
-          <div class="card-foot">
-            <div class="card-author"><div class="av">EL</div> Erik Lindström</div>
-            <span>8 min · 3 feb 2026</span>
-          </div>
-        </div>
-      </a>
+    <a class="card" data-cat="review" href="#">
+      <div class="card-img ci-review">[ Bild ]</div>
+      <span class="pill p-review">Recension</span>
+      <div class="card-title">MiniLux Pro — vi testade den i 4 veckor. Här är vår ärliga dom.</div>
+      <p class="card-excerpt">Autofokus, WiFi 6 och roterbar fot — men lever den upp till löftena i verkliga hemmiljöer? Vi testar utan filter.</p>
+      <div class="card-foot"><div class="card-author"><div class="av">EL</div>Erik Lindström</div><span>8 min · 3 feb 2026</span></div>
+    </a>
 
-      <!-- POST 1 -->
-      <a class="card" href="#">
-        <div class="card-img guide">[ Bild ]</div>
-        <div class="card-body">
-          <span class="card-pill pill-guide">Guide</span>
-          <div class="card-title">Så väljer du rätt projiceringsyta — duk, vit vägg eller grå?</div>
-          <p class="card-excerpt">Ytan du projicerar på spelar större roll än du tror. Vi jämför alternativen och berättar vad som passar ditt rum bäst.</p>
-          <div class="card-foot">
-            <div class="card-author"><div class="av">ML</div> Maria Lund</div>
-            <span>6 min · 28 jan 2026</span>
-          </div>
-        </div>
-      </a>
+    <a class="card" data-cat="guide" href="#">
+      <div class="card-img ci-guide">[ Bild ]</div>
+      <span class="pill p-guide">Guide</span>
+      <div class="card-title">Hemmabio under 5 000 kr — är det möjligt 2026?</div>
+      <p class="card-excerpt">Vi sätter ihop kompletta hemmabioupplägg för tre budgetar. Spoiler: en miniprojektor + soundbar slår en stor-TV i den här klassen.</p>
+      <div class="card-foot"><div class="card-author"><div class="av">ML</div>Maria Lund</div><span>9 min · 17 jan 2026</span></div>
+    </a>
 
-      <!-- POST 2 -->
-      <a class="card" href="#">
-        <div class="card-img tips">[ Bild ]</div>
-        <div class="card-body">
-          <span class="card-pill pill-tips">Tips</span>
-          <div class="card-title">5 misstag alla nybörjare gör med sin projektor — och hur du undviker dem</div>
-          <p class="card-excerpt">Fel ljusstyrka, fel avstånd, fel vinkel. Vi listar de vanligaste fallgroparna och hur du enkelt fixar dem.</p>
-          <div class="card-foot">
-            <div class="card-author"><div class="av">JH</div> Johan Holm</div>
-            <span>4 min · 24 jan 2026</span>
-          </div>
-        </div>
-      </a>
+    <a class="card" data-cat="tech" href="#">
+      <div class="card-img ci-tech">[ Bild ]</div>
+      <span class="pill p-tech">Teknik</span>
+      <div class="card-title">DLP vs LCD vs LCOS — vad är skillnaden och vilket ska du välja?</div>
+      <p class="card-excerpt">Tre tekniker, tre filosofier. Vi förklarar hur de fungerar och vilken som passar bäst för hemmabio, gaming och presentationer.</p>
+      <div class="card-foot"><div class="card-author"><div class="av">EL</div>Erik Lindström</div><span>7 min · 20 jan 2026</span></div>
+    </a>
 
-      <!-- POST 3 -->
-      <a class="card" href="#">
-        <div class="card-img tech">[ Bild ]</div>
-        <div class="card-body">
-          <span class="card-pill pill-tech">Teknik</span>
-          <div class="card-title">DLP vs LCD vs LCOS — vad är skillnaden och vilket ska du välja?</div>
-          <p class="card-excerpt">Tre tekniker, tre filosofier. Vi förklarar hur de fungerar och vilken som passar bäst för hemmabio, gaming och presentationer.</p>
-          <div class="card-foot">
-            <div class="card-author"><div class="av">EL</div> Erik Lindström</div>
-            <span>7 min · 20 jan 2026</span>
-          </div>
-        </div>
-      </a>
+    <a class="card" data-cat="tips" href="#">
+      <div class="card-img ci-tips">[ Bild ]</div>
+      <span class="pill p-tips">Tips</span>
+      <div class="card-title">5 misstag alla nybörjare gör med sin projektor</div>
+      <p class="card-excerpt">Fel ljusstyrka, fel avstånd, fel vinkel. Vi listar de vanligaste fallgroparna och hur du enkelt fixar dem.</p>
+      <div class="card-foot"><div class="card-author"><div class="av">JH</div>Johan Holm</div><span>4 min · 24 jan 2026</span></div>
+    </a>
 
-      <!-- POST 4 -->
-      <a class="card" href="#">
-        <div class="card-img guide">[ Bild ]</div>
-        <div class="card-body">
-          <span class="card-pill pill-guide">Guide</span>
-          <div class="card-title">Hemmabio under 5 000 kr — är det möjligt 2026?</div>
-          <p class="card-excerpt">Vi sätter ihop kompletta hemmabioupplägg för tre budgetar. Spoiler: en miniprojektor + soundbar slår en TV i den här klassen.</p>
-          <div class="card-foot">
-            <div class="card-author"><div class="av">ML</div> Maria Lund</div>
-            <span>9 min · 17 jan 2026</span>
-          </div>
-        </div>
-      </a>
+    <a class="card" data-cat="guide" href="#">
+      <div class="card-img ci-guide">[ Bild ]</div>
+      <span class="pill p-guide">Guide</span>
+      <div class="card-title">Så väljer du rätt projiceringsyta — duk, vit vägg eller grå?</div>
+      <p class="card-excerpt">Ytan du projicerar på spelar större roll än du tror. Vi jämför alternativen och berättar vad som passar ditt rum.</p>
+      <div class="card-foot"><div class="card-author"><div class="av">ML</div>Maria Lund</div><span>6 min · 28 jan 2026</span></div>
+    </a>
 
-      <!-- POST 5 -->
-      <a class="card" href="#">
-        <div class="card-img review">[ Bild ]</div>
-        <div class="card-body">
-          <span class="card-pill pill-review">Recension</span>
-          <div class="card-title">MiniLux Ultra — 700 lumen i ett litet format. Testad i 3 veckor.</div>
-          <p class="card-excerpt">Ultra-modellen lovar 4K-stöd, Dolby Audio och AI-autofokus. Vi satte påståendena på prov och mätte upp hur mycket de faktiskt levererar.</p>
-          <div class="card-foot">
-            <div class="card-author"><div class="av">JH</div> Johan Holm</div>
-            <span>10 min · 14 jan 2026</span>
-          </div>
-        </div>
-      </a>
+    <a class="card" data-cat="review" href="#">
+      <div class="card-img ci-review">[ Bild ]</div>
+      <span class="pill p-review">Recension</span>
+      <div class="card-title">MiniLux Ultra — 700 lumen i ett litet format. Testad i 3 veckor.</div>
+      <p class="card-excerpt">Ultra lovar 4K-stöd, Dolby Audio och AI-autofokus. Vi satte påståendena på prov och mätte hur mycket de faktiskt levererar.</p>
+      <div class="card-foot"><div class="card-author"><div class="av">JH</div>Johan Holm</div><span>10 min · 14 jan 2026</span></div>
+    </a>
 
-      <!-- POST 6 -->
-      <a class="card" href="#">
-        <div class="card-img tips">[ Bild ]</div>
-        <div class="card-body">
-          <span class="card-pill pill-tips">Tips</span>
-          <div class="card-title">Utomhusbio hemma — allt du behöver för en perfekt kväll</div>
-          <p class="card-excerpt">Rätt projektor, bra ljud och en bekväm yta att sitta på. Så sätter du upp en minnesvärd utomhusbiokväll utan att spendera en förmögenhet.</p>
-          <div class="card-foot">
-            <div class="card-author"><div class="av">ML</div> Maria Lund</div>
-            <span>5 min · 10 jan 2026</span>
-          </div>
-        </div>
-      </a>
+    <a class="card" data-cat="guide" href="#">
+      <div class="card-img ci-guide">[ Bild ]</div>
+      <span class="pill p-guide">Guide</span>
+      <div class="card-title">ANSI Lumen förklarat — hur mycket ljusstyrka behöver du egentligen?</div>
+      <p class="card-excerpt">Siffrorna på förpackningen säger sällan hela sanningen. Det du faktiskt behöver veta för att fatta rätt köpbeslut.</p>
+      <div class="card-foot"><div class="card-author"><div class="av">EL</div>Erik Lindström</div><span>6 min · 7 jan 2026</span></div>
+    </a>
 
-      <!-- POST 7 -->
-      <a class="card" href="#">
-        <div class="card-img guide">[ Bild ]</div>
-        <div class="card-body">
-          <span class="card-pill pill-guide">Guide</span>
-          <div class="card-title">ANSI Lumen förklarat — hur mycket ljusstyrka behöver du egentligen?</div>
-          <p class="card-excerpt">Siffrorna på förpackningen säger sällan hela sanningen. Här är vad du faktiskt behöver veta om ljusstyrka för att fatta rätt köpbeslut.</p>
-          <div class="card-foot">
-            <div class="card-author"><div class="av">EL</div> Erik Lindström</div>
-            <span>6 min · 7 jan 2026</span>
-          </div>
-        </div>
-      </a>
+    <a class="card" data-cat="tips" href="#">
+      <div class="card-img ci-tips">[ Bild ]</div>
+      <span class="pill p-tips">Tips</span>
+      <div class="card-title">Utomhusbio hemma — allt du behöver för en perfekt kväll</div>
+      <p class="card-excerpt">Rätt projektor, bra ljud och en bekväm yta att sitta på. Så sätter du upp en minnesvärd utomhusbiokväll utan att spendera en förmögenhet.</p>
+      <div class="card-foot"><div class="card-author"><div class="av">ML</div>Maria Lund</div><span>5 min · 10 jan 2026</span></div>
+    </a>
 
-      <!-- POST 8 -->
-      <a class="card" href="#">
-        <div class="card-img tech">[ Bild ]</div>
-        <div class="card-body">
-          <span class="card-pill pill-jmf">Jämförelse</span>
-          <div class="card-title">Miniprojektor vs stor TV — vad ger mest bild för pengarna 2026?</div>
-          <p class="card-excerpt">En 75-tums TV eller en projektor som ger 150 tum? Vi räknar på kostnaden per tum och testar bildupplevelsen i ett verkligt vardagsrum.</p>
-          <div class="card-foot">
-            <div class="card-author"><div class="av">JH</div> Johan Holm</div>
-            <span>8 min · 3 jan 2026</span>
-          </div>
-        </div>
-      </a>
+    <a class="card" data-cat="jmf" href="#">
+      <div class="card-img ci-jmf">[ Bild ]</div>
+      <span class="pill p-jmf">Jämförelse</span>
+      <div class="card-title">Miniprojektor vs stor-TV — vad ger mest bild för pengarna 2026?</div>
+      <p class="card-excerpt">En 75-tums TV eller en projektor på 150 tum? Vi räknar på kostnaden per tum och testar bildupplevelsen i ett riktigt vardagsrum.</p>
+      <div class="card-foot"><div class="card-author"><div class="av">JH</div>Johan Holm</div><span>8 min · 3 jan 2026</span></div>
+    </a>
 
-      <!-- POST 9 -->
-      <a class="card" href="#">
-        <div class="card-img tips">[ Bild ]</div>
-        <div class="card-body">
-          <span class="card-pill pill-tips">Tips</span>
-          <div class="card-title">Hur du optimerar rummet för bästa möjliga bild — 8 enkla åtgärder</div>
-          <p class="card-excerpt">Gardiner, väggfärg och möbelplacering påverkar bildkvaliteten mer än tekniken. Här är åtta saker du kan göra redan idag.</p>
-          <div class="card-foot">
-            <div class="card-author"><div class="av">ML</div> Maria Lund</div>
-            <span>5 min · 29 dec 2025</span>
-          </div>
-        </div>
-      </a>
+    <a class="card" data-cat="tips" href="#">
+      <div class="card-img ci-tips">[ Bild ]</div>
+      <span class="pill p-tips">Tips</span>
+      <div class="card-title">Hur du optimerar rummet för bästa möjliga bild — 8 enkla åtgärder</div>
+      <p class="card-excerpt">Gardiner, väggfärg och möbelplacering påverkar bildkvaliteten mer än tekniken. Åtta saker du kan göra redan idag.</p>
+      <div class="card-foot"><div class="card-author"><div class="av">ML</div>Maria Lund</div><span>5 min · 29 dec 2025</span></div>
+    </a>
 
-      <!-- POST 10 -->
-      <a class="card" href="#">
-        <div class="card-img guide">[ Bild ]</div>
-        <div class="card-body">
-          <span class="card-pill pill-guide">Guide</span>
-          <div class="card-title">Projektor för gaming — det här ska du tänka på (input lag, Hz och mer)</div>
-          <p class="card-excerpt">Inte alla projektorer passar för spel. Vi listar de viktigaste specifikationerna för en lagfri spelupplevelse på storbild.</p>
-          <div class="card-foot">
-            <div class="card-author"><div class="av">EL</div> Erik Lindström</div>
-            <span>7 min · 22 dec 2025</span>
-          </div>
-        </div>
-      </a>
+    <a class="card" data-cat="guide" href="#">
+      <div class="card-img ci-guide">[ Bild ]</div>
+      <span class="pill p-guide">Guide</span>
+      <div class="card-title">Projektor för gaming — input lag, Hz och vad du ska tänka på</div>
+      <p class="card-excerpt">Inte alla projektorer passar för spel. De viktigaste specifikationerna för en lagfri spelupplevelse på storbild.</p>
+      <div class="card-foot"><div class="card-author"><div class="av">EL</div>Erik Lindström</div><span>7 min · 22 dec 2025</span></div>
+    </a>
 
-      <!-- POST 11 -->
-      <a class="card" href="#">
-        <div class="card-img review">[ Bild ]</div>
-        <div class="card-body">
-          <span class="card-pill pill-review">Recension</span>
-          <div class="card-title">Epson EH-TW750 — en klassiker som fortfarande håller 2026?</div>
-          <p class="card-excerpt">Epson EH-TW750 har länge varit ett pålitligt val för hemmabio. Vi testar om den fortfarande är värd pengarna mot nyare konkurrenter.</p>
-          <div class="card-foot">
-            <div class="card-author"><div class="av">JH</div> Johan Holm</div>
-            <span>9 min · 15 dec 2025</span>
-          </div>
-        </div>
-      </a>
+    <a class="card" data-cat="tech" href="#">
+      <div class="card-img ci-tech">[ Bild ]</div>
+      <span class="pill p-tech">Teknik</span>
+      <div class="card-title">Vad är keystone-korrigering och varför spelar det roll?</div>
+      <p class="card-excerpt">Den lilla inställningen som gör stor skillnad. Vi förklarar varför projektorn lutar och hur du får en perfekt rektangulär bild varje gång.</p>
+      <div class="card-foot"><div class="card-author"><div class="av">ML</div>Maria Lund</div><span>4 min · 10 dec 2025</span></div>
+    </a>
 
-      <!-- POST 12 -->
-      <a class="card" href="#">
-        <div class="card-img tech">[ Bild ]</div>
-        <div class="card-body">
-          <span class="card-pill pill-tech">Teknik</span>
-          <div class="card-title">Vad är keystone-korrigering och varför spelar det roll?</div>
-          <p class="card-excerpt">Den lilla inställningen som gör stor skillnad. Vi förklarar keystone, varför projektorn lutar, och hur du får en perfekt rektangulär bild varje gång.</p>
-          <div class="card-foot">
-            <div class="card-author"><div class="av">ML</div> Maria Lund</div>
-            <span>4 min · 10 dec 2025</span>
-          </div>
-        </div>
-      </a>
+    <a class="card" data-cat="guide" href="#">
+      <div class="card-img ci-guide">[ Bild ]</div>
+      <span class="pill p-guide">Guide</span>
+      <div class="card-title">Barn och projektor — är det en bra kombination?</div>
+      <p class="card-excerpt">Familjekväll på 120 tum eller skadlig för ögonen? Vi reder ut myter och fakta om projektorer och barn.</p>
+      <div class="card-foot"><div class="card-author"><div class="av">EL</div>Erik Lindström</div><span>6 min · 5 dec 2025</span></div>
+    </a>
 
-      <!-- POST 13 -->
-      <a class="card" href="#">
-        <div class="card-img guide">[ Bild ]</div>
-        <div class="card-body">
-          <span class="card-pill pill-guide">Guide</span>
-          <div class="card-title">Barn och projektor — är det en bra kombination?</div>
-          <p class="card-excerpt">Familjekväll på 120 tum eller skadlig för ögonen? Vi reder ut myter och fakta, och rekommenderar de bästa modellerna för barnrum och vardagsrum.</p>
-          <div class="card-foot">
-            <div class="card-author"><div class="av">EL</div> Erik Lindström</div>
-            <span>6 min · 5 dec 2025</span>
-          </div>
-        </div>
-      </a>
+    <a class="card" data-cat="jmf" href="#">
+      <div class="card-img ci-jmf">[ Bild ]</div>
+      <span class="pill p-jmf">Jämförelse</span>
+      <div class="card-title">Kortkastare vs normalprojektorer — när är det värt det?</div>
+      <p class="card-excerpt">Kortkastare projicerar stor bild på kort avstånd men kostar mer. Vi jämför när de faktiskt är värda investeringen.</p>
+      <div class="card-foot"><div class="card-author"><div class="av">JH</div>Johan Holm</div><span>7 min · 28 nov 2025</span></div>
+    </a>
 
-      <!-- POST 14 -->
-      <a class="card" href="#">
-        <div class="card-img tips">[ Bild ]</div>
-        <div class="card-body">
-          <span class="card-pill pill-jmf">Jämförelse</span>
-          <div class="card-title">Kortkastare vs. normalprojektorer — när är det värt det?</div>
-          <p class="card-excerpt">Kortkastare projicerar en stor bild på kort avstånd — men till ett betydligt högre pris. Vi jämför när de faktiskt är värda investeringen.</p>
-          <div class="card-foot">
-            <div class="card-author"><div class="av">JH</div> Johan Holm</div>
-            <span>7 min · 28 nov 2025</span>
-          </div>
-        </div>
-      </a>
+    <a class="card" data-cat="tips" href="#">
+      <div class="card-img ci-tips">[ Bild ]</div>
+      <span class="pill p-tips">Tips</span>
+      <div class="card-title">Så ställer du in färgprofilen för perfekt bild — steg för steg</div>
+      <p class="card-excerpt">Standardinställningarna är sällan bäst. En praktisk guide för att kalibrera din projektor för film, sport och gaming.</p>
+      <div class="card-foot"><div class="card-author"><div class="av">ML</div>Maria Lund</div><span>8 min · 20 nov 2025</span></div>
+    </a>
 
-      <!-- POST 15 -->
-      <a class="card" href="#">
-        <div class="card-img guide">[ Bild ]</div>
-        <div class="card-body">
-          <span class="card-pill pill-guide">Guide</span>
-          <div class="card-title">Så ställer du in färgprofilen på din projektor för perfekt bild</div>
-          <p class="card-excerpt">Standardinställningarna är sällan bäst. Här är en steg-för-steg-guide för att kalibrera din projektor för film, sport och gaming.</p>
-          <div class="card-foot">
-            <div class="card-author"><div class="av">ML</div> Maria Lund</div>
-            <span>8 min · 20 nov 2025</span>
-          </div>
-        </div>
-      </a>
+    <a class="card" data-cat="tech" href="#">
+      <div class="card-img ci-tech">[ Bild ]</div>
+      <span class="pill p-tech">Teknik</span>
+      <div class="card-title">4K, 1080p eller 720p — vilken upplösning räcker för din setup?</div>
+      <p class="card-excerpt">Höjer 4K verkligen upplevelsen när du sitter 4 meter från duken? Vad ögat faktiskt ser och hur du räknar ut rätt upplösning.</p>
+      <div class="card-foot"><div class="card-author"><div class="av">EL</div>Erik Lindström</div><span>6 min · 14 nov 2025</span></div>
+    </a>
 
-      <!-- POST 16 -->
-      <a class="card" href="#">
-        <div class="card-img tech">[ Bild ]</div>
-        <div class="card-body">
-          <span class="card-pill pill-tech">Teknik</span>
-          <div class="card-title">4K, 1080p eller 720p — vilken upplösning räcker för din setup?</div>
-          <p class="card-excerpt">Höjer 4K verkligen upplevelsen när du sitter 4 meter från duken? Vi testar vad ögat faktiskt kan se och hur du räknar ut rätt upplösning för ditt avstånd.</p>
-          <div class="card-foot">
-            <div class="card-author"><div class="av">EL</div> Erik Lindström</div>
-            <span>6 min · 14 nov 2025</span>
-          </div>
-        </div>
-      </a>
+    <a class="card" data-cat="review" href="#">
+      <div class="card-img ci-review">[ Bild ]</div>
+      <span class="pill p-review">Recension</span>
+      <div class="card-title">Epson EH-TW750 — en klassiker som fortfarande håller 2026?</div>
+      <p class="card-excerpt">Epson EH-TW750 har länge varit ett tryggt val för hemmabio. Är den fortfarande värd pengarna mot nyare konkurrenter?</p>
+      <div class="card-foot"><div class="card-author"><div class="av">JH</div>Johan Holm</div><span>9 min · 15 okt 2025</span></div>
+    </a>
 
-    </div><!-- /grid -->
+    <a class="card" data-cat="guide" href="#">
+      <div class="card-img ci-guide">[ Bild ]</div>
+      <span class="pill p-guide">Guide</span>
+      <div class="card-title">Projektor på terrassen — vad ska du tänka på inför sommaren?</div>
+      <p class="card-excerpt">Fukt, dagsljus och kabeldragning. Det här är det du behöver ha koll på innan du ställer ut projektorn utomhus.</p>
+      <div class="card-foot"><div class="card-author"><div class="av">ML</div>Maria Lund</div><span>5 min · 2 okt 2025</span></div>
+    </a>
 
-    <div class="pagination">
-      <button class="pg active">1</button>
-      <button class="pg">2</button>
-      <button class="pg">3</button>
-      <span class="pg-dots">…</span>
-      <button class="pg">8</button>
-    </div>
-
-  </main><!-- /main -->
-
-  <!-- SIDEBAR -->
-  <aside>
-    <div class="about-box sidebar-block">
-      <div style="font-size:1.8rem">📽️</div>
-      <p>Oberoende blogg om projektorer och hemmabio. Inga betalda rekommendationer — bara ärliga guider och tester.</p>
-    </div>
-
-    <div class="sidebar-block">
-      <div class="newsletter">
-        <h4>Nyhetsbrevet</h4>
-        <p>Få de bästa artiklarna direkt i inkorgen, en gång i veckan.</p>
-        <div class="nl-form">
-          <input type="email" placeholder="din@email.se"/>
-          <button type="button">Prenumerera</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="sidebar-block">
-      <div class="sb-title">Populära artiklar</div>
-      <ul class="sb-list">
-        <li><a href="#">
-          <span class="sb-num">01</span>
-          <div><div class="sb-link-title">Varför en projektor slår TV:n — 7 skäl att byta</div><div class="sb-link-meta">Guide · 12 jan 2026</div></div>
-        </a></li>
-        <li><a href="#">
-          <span class="sb-num">02</span>
-          <div><div class="sb-link-title">ANSI Lumen förklarat — hur mycket behöver du?</div><div class="sb-link-meta">Guide · 7 jan 2026</div></div>
-        </a></li>
-        <li><a href="#">
-          <span class="sb-num">03</span>
-          <div><div class="sb-link-title">DLP vs LCD vs LCOS — vad är skillnaden?</div><div class="sb-link-meta">Teknik · 20 jan 2026</div></div>
-        </a></li>
-        <li><a href="#">
-          <span class="sb-num">04</span>
-          <div><div class="sb-link-title">Hemmabio under 5 000 kr — möjligt 2026?</div><div class="sb-link-meta">Guide · 17 jan 2026</div></div>
-        </a></li>
-        <li><a href="#">
-          <span class="sb-num">05</span>
-          <div><div class="sb-link-title">Miniprojektor vs stor TV 2026</div><div class="sb-link-meta">Jämförelse · 3 jan 2026</div></div>
-        </a></li>
-      </ul>
-    </div>
-
-    <div class="sidebar-block">
-      <div class="sb-title">Kategorier</div>
-      <div class="tag-cloud">
-        <a class="tag" href="#">Guider</a>
-        <a class="tag" href="#">Recensioner</a>
-        <a class="tag" href="#">Hemmabio</a>
-        <a class="tag" href="#">Gaming</a>
-        <a class="tag" href="#">Tips & tricks</a>
-        <a class="tag" href="#">Teknik</a>
-        <a class="tag" href="#">Jämförelser</a>
-        <a class="tag" href="#">Utomhusbio</a>
-        <a class="tag" href="#">Budget</a>
-        <a class="tag" href="#">4K</a>
-      </div>
-    </div>
-
-    <div class="sidebar-block">
-      <div class="sb-title">Senaste recensionerna</div>
-      <ul class="sb-list">
-        <li><a href="#">
-          <span class="sb-num">→</span>
-          <div><div class="sb-link-title">MiniLux Pro — 4 veckors test</div><div class="sb-link-meta">Recension · 3 feb 2026</div></div>
-        </a></li>
-        <li><a href="#">
-          <span class="sb-num">→</span>
-          <div><div class="sb-link-title">MiniLux Ultra — 700 lumen testad</div><div class="sb-link-meta">Recension · 14 jan 2026</div></div>
-        </a></li>
-        <li><a href="#">
-          <span class="sb-num">→</span>
-          <div><div class="sb-link-title">Epson EH-TW750 — klassiker testad</div><div class="sb-link-meta">Recension · 15 dec 2025</div></div>
-        </a></li>
-      </ul>
-    </div>
-
-  </aside>
-</div><!-- /main -->
+  </div>
+</div>
 
 <footer>
-  <div class="foot-inner">
-    <div class="foot-brand">Projektor<span>Bloggen</span></div>
-    <div class="foot-links">
-      <a href="#">Om bloggen</a>
-      <a href="#">Kontakt</a>
-      <a href="#">Integritetspolicy</a>
-    </div>
-    <p>&copy; 2026 ProjektorBloggen — Oberoende granskning</p>
-  </div>
+  <div class="foot-brand">Projektor<span>Bloggen</span></div>
+  <p>Oberoende granskning &copy; 2026</p>
 </footer>
 
 <script>
-document.querySelectorAll('.ftab').forEach(btn=>{
-  btn.addEventListener('click',()=>{
-    document.querySelectorAll('.ftab').forEach(b=>b.classList.remove('active'));
-    btn.classList.add('active');
+function filter(cat, btn) {
+  document.querySelectorAll('.f').forEach(b => b.classList.remove('on'));
+  btn.classList.add('on');
+  document.querySelectorAll('.card').forEach(c => {
+    c.style.display = (cat === 'all' || c.dataset.cat === cat) ? 'flex' : 'none';
   });
-});
+}
 </script>
 </body>
 </html>

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>MiniLux Pro: fyra veckors test i ett riktigt hem | HemmaBioGuiden.se</title>
+<meta name="description" content="Vi testade MiniLux Pro i fyra veckor i sovrum, vardagsrum och utomhus. Rotationsfot, WiFi 6 och autofokus - gör det skillnad i vardagen?"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{background:#f8f7f4;color:#1e1e1e;font-family:'DM Sans',sans-serif;font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
+nav{background:#fff;border-bottom:1px solid #e9e6e0;position:sticky;top:0;z-index:100;padding:0 2rem}
+.nav-row1{display:flex;align-items:center;justify-content:space-between;height:68px}
+.brand{font-family:'DM Serif Display',serif;font-size:1.6rem;color:#1e1e1e;text-decoration:none}
+.brand em{color:#2e7d6b;font-style:normal}
+.nav-back{font-size:.82rem;font-weight:500;color:#888;text-decoration:none;transition:color .2s}
+.nav-back:hover{color:#1e1e1e}
+.nav-row2{display:flex;gap:0;border-top:1px solid #f0ede8;overflow-x:auto}
+.nav-row2 a{font-size:.75rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#888;text-decoration:none;padding:.6rem 1.1rem;white-space:nowrap;border-bottom:2px solid transparent;transition:all .15s}
+.nav-row2 a:hover{color:#1e1e1e;border-bottom-color:#1e1e1e}
+.nav-row2 a.on{color:#2e7d6b;border-bottom-color:#2e7d6b}
+
+.wrap{max-width:1160px;margin:0 auto;padding:2.5rem 2rem 5rem;display:grid;grid-template-columns:1fr 290px;gap:4rem}
+
+/* ARTICLE */
+.art-tag{font-size:.62rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#c0392b;margin-bottom:.6rem}
+h1{font-family:'DM Serif Display',serif;font-size:clamp(1.7rem,3.5vw,2.4rem);line-height:1.2;color:#1e1e1e;margin-bottom:.8rem}
+.art-intro{font-family:'DM Serif Display',serif;font-style:italic;font-size:1.05rem;color:#666;line-height:1.75;margin-bottom:1.5rem;padding-bottom:1.5rem;border-bottom:1px solid #e9e6e0}
+.art-meta{display:flex;align-items:center;gap:.5rem;font-size:.73rem;color:#aaa;margin-bottom:1.8rem;flex-wrap:wrap}
+.dot{width:3px;height:3px;border-radius:50%;background:#ccc;display:inline-block}
+.art-img{background:#e8f0ee;border-radius:6px;aspect-ratio:16/7;display:flex;align-items:center;justify-content:center;font-size:.75rem;color:#bbb;margin-bottom:2rem}
+.body{font-size:.98rem;color:#2a2a2a;line-height:1.85}
+.body p{margin-bottom:1.2rem}
+.body h2{font-family:'DM Serif Display',serif;font-size:1.3rem;margin:2.2rem 0 .7rem;color:#1e1e1e}
+.body ul,.body ol{padding-left:1.4rem;margin-bottom:1.2rem}
+.body li{margin-bottom:.5rem}
+.body strong{font-weight:600;color:#1e1e1e}
+.callout{background:#fff;border-left:3px solid #2e7d6b;padding:.9rem 1.2rem;margin:1.5rem 0;border-radius:0 4px 4px 0;border:1px solid #e9e6e0;border-left-width:3px}
+.callout p{margin:0;font-size:.9rem;color:#555;font-style:italic;line-height:1.7}
+.spec-tbl{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:.88rem;border:1px solid #e9e6e0;border-radius:4px;overflow:hidden}
+.spec-tbl td{padding:.6rem .9rem;border-bottom:1px solid #f0ede8;color:#444}
+.spec-tbl td:first-child{font-weight:600;color:#1e1e1e;width:45%;background:#faf9f6}
+.spec-tbl tr:last-child td{border-bottom:none}
+.score-box{background:#fff;border:1px solid #e9e6e0;border-radius:6px;padding:1.4rem;margin:1.5rem 0}
+.score-row{display:flex;align-items:center;gap:1rem;margin-bottom:.7rem}
+.score-lbl{font-size:.8rem;width:150px;flex-shrink:0;color:#555}
+.score-bar{flex:1;background:#ece9e2;border-radius:2px;height:4px;overflow:hidden}
+.score-fill{height:100%;background:#2e7d6b}
+.score-val{font-size:.8rem;font-weight:600;width:26px;text-align:right}
+.score-total{margin-top:1rem;padding-top:1rem;border-top:1px solid #e9e6e0;display:flex;align-items:baseline;gap:.5rem}
+.score-num{font-family:'DM Serif Display',serif;font-size:2.5rem;color:#1e1e1e;line-height:1}
+.score-stars{color:#2e7d6b;font-size:.95rem;margin-left:.4rem}
+.pc{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.5rem 0}
+.pc-box{background:#fff;border:1px solid #e9e6e0;border-radius:6px;padding:1.1rem}
+.pc-box h4{font-size:.63rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.7rem}
+.pros h4{color:#2e7d6b}.cons h4{color:#c0392b}
+.pc-box ul{list-style:none}
+.pc-box li{font-size:.83rem;color:#555;padding:.32rem 0;display:flex;gap:.5rem;border-bottom:1px solid #f8f6f2;line-height:1.4}
+.pc-box li:last-child{border-bottom:none}
+.pros li::before{content:'✓';color:#2e7d6b;font-weight:700;flex-shrink:0}
+.cons li::before{content:'✗';color:#c0392b;font-weight:700;flex-shrink:0}
+
+/* AUTHOR */
+.author-box{background:#fff;border:1px solid #e9e6e0;border-radius:6px;padding:1.6rem;margin-top:2.5rem;display:flex;gap:1.2rem}
+.av-lg{width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.95rem;font-weight:700;flex-shrink:0;background:#f0ece6;color:#a07030}
+.bio-expert{font-size:.6rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#2e7d6b;margin-bottom:.2rem}
+.bio-name{font-family:'DM Serif Display',serif;font-size:1.1rem;color:#1e1e1e;margin-bottom:.1rem}
+.bio-role{font-size:.78rem;color:#aaa;font-style:italic;margin-bottom:.7rem}
+.bio-text{font-size:.84rem;color:#666;line-height:1.65;margin-bottom:.8rem}
+.bio-stats{display:flex;gap:1.5rem;flex-wrap:wrap}
+.bs strong{display:block;font-family:'DM Serif Display',serif;font-size:1rem;color:#1e1e1e}
+.bs span{font-size:.68rem;color:#aaa;text-transform:uppercase;letter-spacing:.05em}
+
+/* RELATED */
+.related{margin-top:2.5rem;padding-top:2rem;border-top:1px solid #e9e6e0}
+.rel-head{font-size:.65rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:#aaa;margin-bottom:1.2rem}
+.rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.rel-card{text-decoration:none;color:inherit;background:#fff;border:1px solid #e9e6e0;border-radius:6px;overflow:hidden;transition:box-shadow .2s}
+.rel-card:hover{box-shadow:0 4px 16px rgba(0,0,0,.06)}
+.rel-img{aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;font-size:.7rem;color:#ccc;background:#f0ede8}
+.rel-body{padding:.85rem}
+.rel-cat{font-size:.6rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#2e7d6b;display:block;margin-bottom:.25rem}
+.rel-title{font-family:'DM Serif Display',serif;font-size:.88rem;line-height:1.35;color:#1e1e1e}
+
+/* SIDEBAR */
+aside{padding-top:0}
+.sb-block{margin-bottom:2rem}
+.sb-head{font-size:.63rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:#aaa;border-bottom:1px solid #e9e6e0;padding-bottom:.5rem;margin-bottom:1rem}
+.toc-list{list-style:none}
+.toc-list li{border-bottom:1px solid #f5f2ee}
+.toc-list a{display:block;padding:.5rem 0;font-size:.82rem;color:#666;text-decoration:none;transition:color .2s}
+.toc-list a:hover{color:#2e7d6b}
+.sb-list{list-style:none}
+.sb-list li{border-bottom:1px solid #f5f2ee}
+.sb-list a{display:flex;gap:.7rem;padding:.65rem 0;text-decoration:none;align-items:flex-start}
+.sb-list a:hover .sb-t{color:#2e7d6b}
+.sb-num{font-family:'DM Serif Display',serif;font-size:1rem;color:#e0ddd8;flex-shrink:0;width:20px;line-height:1.2}
+.sb-t{font-size:.8rem;font-weight:500;color:#333;line-height:1.3;transition:color .2s}
+.sb-m{font-size:.67rem;color:#bbb;margin-top:.1rem}
+
+footer{background:#1e1e1e;color:#fff;padding:3rem 2rem 2rem;margin-top:3rem}
+.foot-wrap{max-width:1160px;margin:0 auto}
+.foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:2.5rem;margin-bottom:2.5rem}
+.foot-brand{font-family:'DM Serif Display',serif;font-size:1.2rem;color:#fff;margin-bottom:.5rem}
+.foot-brand em{color:#7dd6c3;font-style:normal}
+.foot-desc{font-size:.8rem;color:#666;line-height:1.65;max-width:240px}
+.foot-col h4{font-size:.63rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#555;margin-bottom:.9rem;padding-bottom:.4rem;border-bottom:1px solid #2a2a2a}
+.foot-col ul{list-style:none}
+.foot-col li{margin-bottom:.45rem}
+.foot-col a{font-size:.8rem;color:#666;text-decoration:none;transition:color .2s}
+.foot-col a:hover{color:#7dd6c3}
+.foot-bottom{padding-top:1.5rem;border-top:1px solid #2a2a2a;display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem}
+.foot-bottom p{font-size:.73rem;color:#444}
+
+@media(max-width:900px){.wrap{grid-template-columns:1fr}aside{display:none}.rel-grid{grid-template-columns:1fr 1fr}.pc{grid-template-columns:1fr}.foot-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:540px){.rel-grid{grid-template-columns:1fr}.author-box{flex-direction:column}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-row1">
+    <a class="brand" href="index.html">HemmaBio<em>Guiden</em></a>
+    <a class="nav-back" href="index.html">Tillbaka till bloggen</a>
+  </div>
+  <div class="nav-row2">
+    <a href="index.html">Alla</a>
+    <a href="#">Guider</a>
+    <a href="#" class="on">Recensioner</a>
+    <a href="#">Projektorer</a>
+    <a href="#">Ljud</a>
+    <a href="#">Streaming</a>
+    <a href="#">Tips</a>
+    <a href="#">Jämförelser</a>
+  </div>
+</nav>
+
+<div class="wrap">
+  <article>
+    <div class="art-tag">Recension · Projektorer</div>
+    <h1>MiniLux Pro: fyra veckors test i ett riktigt hem</h1>
+    <p class="art-intro">Rotationsfot, WiFi 6 och autofokus låter bra i broschyren. Vi testade om funktionerna faktiskt gör skillnad i vardagen, i sovrum, vardagsrum och utomhus under fyra veckor.</p>
+    <div class="art-meta">
+      <strong>Martin Kjell</strong>
+      <span class="dot"></span>
+      <span>18 maj 2026</span>
+      <span class="dot"></span>
+      <span>11 min läsning</span>
+    </div>
+    <div class="art-img">[ Produktbild MiniLux Pro ]</div>
+
+    <div class="body">
+      <p>Det är lätt att imponeras av en specifikationslista. Svårare är att veta om funktionerna faktiskt gör skillnad när du ska titta på en film en vanlig tisdagkväll. Vi testade MiniLux Pro i fyra veckor för att ta reda på just det.</p>
+
+      <h2>Rotationsfoten förändrar hur du använder projektorn</h2>
+      <p>Det här är den funktion vi var mest nyfikna på. En fot som roterar 360 grader låter dig vrida projektorn och projicera rakt upp i taket utan stativ eller balansakter. Sätt ner den på nattduksbordet och du har en 100-tums bild i taket på tio sekunder.</p>
+      <p>I praktiken används den varje kväll. Det är svårt att gå tillbaka till en projektor utan den när man väl vant sig. Det är en liten konstruktionsdetalj med stor påverkan på vardagsanvändningen.</p>
+      <div class="callout"><p>Rotationsfoten är den enskilda funktion som mest förändrar hur du faktiskt använder projektorn i hemmet. Den gör sovrummet till det naturliga rummet för filmkvällar.</p></div>
+
+      <h2>Autofokus och keystone i verkligheten</h2>
+      <p>Hybrid-autofokusen hittar skärpan på 2-3 sekunder efter att du placerat projektorn. Den är inte perfekt vid extrema vinklar men kräver sällan manuell justering i normala situationer. Automatisk keystone rättar till en sned bild omedelbart.</p>
+      <p>Under fyra veckor behövde vi justera manuellt vid ett enda tillfälle, när vi testade en ovanlig vinkel mot ett taksnedtak. I alla andra situationer skötte sig projektorn själv.</p>
+
+      <h2>WiFi 6 och streaming</h2>
+      <p>I ett hushåll med fjorton uppkopplade enheter var WiFi 6 märkbart stabilare än vad vi är vana vid från WiFi 5-projektorer. Vi streamade 4K-innehåll från YouTube och Netflix utan ett enda avbrott under testperioden. Android 13 är snabbt och alla appar installeras och funkar direkt.</p>
+
+      <h2>Bildkvalitet i olika miljöer</h2>
+      <p>480 ANSI Lumen är mer än basmodellens 350. Skillnaden märks tydligast i halvmörka rum. I sovrummet med lite gatuljus in genom gardinerna håller bilden sig skarp och kontraststark vid 100 tum. I vardagsrummet med dagsljus krävs mörklagda gardiner för bästa resultat.</p>
+      <p>Vid 130 tum börjar du märka att du är nära gränsen för vad ljusstyrkan klarar i icke-mörklagda rum. Väljer du att projicera riktigt stort bör rummet vara ordentligt mörkat.</p>
+
+      <h2>Specifikationer</h2>
+      <table class="spec-tbl">
+        <tr><td>Upplösning</td><td>1080p Full HD</td></tr>
+        <tr><td>Ljusstyrka</td><td>480 ANSI Lumen</td></tr>
+        <tr><td>Kontrastratio</td><td>1500:1</td></tr>
+        <tr><td>WiFi</td><td>WiFi 6 Dual Band</td></tr>
+        <tr><td>Bluetooth</td><td>5.2</td></tr>
+        <tr><td>Fokus</td><td>Hybrid-autofokus</td></tr>
+        <tr><td>Keystone</td><td>Automatisk 4-punkt</td></tr>
+        <tr><td>OS</td><td>Android 13</td></tr>
+        <tr><td>Max bildstorlek</td><td>150 tum</td></tr>
+      </table>
+
+      <h2>Betyg</h2>
+      <div class="score-box">
+        <div class="score-row"><span class="score-lbl">Bildkvalitet</span><div class="score-bar"><div class="score-fill" style="width:86%"></div></div><span class="score-val">4.3</span></div>
+        <div class="score-row"><span class="score-lbl">Byggkvalitet</span><div class="score-bar"><div class="score-fill" style="width:88%"></div></div><span class="score-val">4.4</span></div>
+        <div class="score-row"><span class="score-lbl">Uppkoppling</span><div class="score-bar"><div class="score-fill" style="width:96%"></div></div><span class="score-val">4.8</span></div>
+        <div class="score-row"><span class="score-lbl">Användarvänlighet</span><div class="score-bar"><div class="score-fill" style="width:90%"></div></div><span class="score-val">4.5</span></div>
+        <div class="score-row"><span class="score-lbl">Värde för pengarna</span><div class="score-bar"><div class="score-fill" style="width:90%"></div></div><span class="score-val">4.5</span></div>
+        <div class="score-total">
+          <span class="score-num">4.5</span>
+          <span style="color:#aaa;font-size:.9rem">/5</span>
+          <span class="score-stars">★★★★½</span>
+        </div>
+      </div>
+
+      <div class="pc">
+        <div class="pc-box pros"><h4>Vad vi gillar</h4><ul>
+          <li>Rotationsfot, förändrar vardagsanvändningen</li>
+          <li>WiFi 6 utan avbrott</li>
+          <li>Autofokus som faktiskt fungerar</li>
+          <li>Märkbart starkare bild än basmodellen</li>
+          <li>Android 13 snabb och stabil</li>
+        </ul></div>
+        <div class="pc-box cons"><h4>Vad vi saknar</h4><ul>
+          <li>Inget inbyggt batteri</li>
+          <li>Inbyggt ljud räcker inte för film</li>
+          <li>Kräver eluttag</li>
+        </ul></div>
+      </div>
+
+      <h2>Slutsats</h2>
+      <p>MiniLux Pro motiverar priset mot basmodellen. Rotationsfoten gör vardagsanvändningen enklare på ett sätt som är svårt att förstå innan man provat. WiFi 6 och autofokus är inte bara tekniska specifikationer, de gör faktisk skillnad i vardagen. Rekommenderas för de flesta som söker en projektor för hemmabruk.</p>
+    </div>
+
+    <div class="author-box">
+      <div class="av-lg">MK</div>
+      <div>
+        <div class="bio-expert">Teknikexpert</div>
+        <div class="bio-name">Martin Kjell</div>
+        <div class="bio-role">Seniorskribent, HemmaBioGuiden.se</div>
+        <p class="bio-text">Martin har testat hemmabioprodukter och konsumentelektronik i tio år för ledande teknikmagasin i Sverige och Norge. Han har en bakgrund som AV-installatör och kombinerar praktisk erfarenhet med journalistisk granskning. Martin specialiserar sig på projektorer, surroundljud och streamingsteknik.</p>
+        <div class="bio-stats">
+          <div class="bs"><strong>10 år</strong><span>Erfarenhet</span></div>
+          <div class="bs"><strong>290+</strong><span>Produkter testade</span></div>
+          <div class="bs"><strong>70+</strong><span>Projektorer</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="related">
+      <div class="rel-head">Fler artiklar</div>
+      <div class="rel-grid">
+        <a class="rel-card" href="minilux-test.html">
+          <div class="rel-img">[ Bild ]</div>
+          <div class="rel-body"><span class="rel-cat">Recension</span><div class="rel-title">MiniLux basmodell: bärbar och batteridriven</div></div>
+        </a>
+        <a class="rel-card" href="minilux-vs-pro.html">
+          <div class="rel-img">[ Bild ]</div>
+          <div class="rel-body"><span class="rel-cat">Jämförelse</span><div class="rel-title">MiniLux mot MiniLux Pro: vad får du mer för?</div></div>
+        </a>
+        <a class="rel-card" href="basta-miniprojektorer-2026.html">
+          <div class="rel-img">[ Bild ]</div>
+          <div class="rel-body"><span class="rel-cat">Guide</span><div class="rel-title">Bästa miniprojektorerna 2026: 8 modeller testade</div></div>
+        </a>
+      </div>
+    </div>
+  </article>
+
+  <aside>
+    <div class="sb-block">
+      <div class="sb-head">Innehåll</div>
+      <ul class="toc-list">
+        <li><a href="#">Rotationsfoten i vardagen</a></li>
+        <li><a href="#">Autofokus och keystone</a></li>
+        <li><a href="#">WiFi 6 och streaming</a></li>
+        <li><a href="#">Bildkvalitet i olika miljöer</a></li>
+        <li><a href="#">Specifikationer</a></li>
+        <li><a href="#">Betyg</a></li>
+        <li><a href="#">Slutsats</a></li>
+      </ul>
+    </div>
+    <div class="sb-block">
+      <div class="sb-head">Mest lästa</div>
+      <ul class="sb-list">
+        <li><a href="basta-miniprojektorer-2026.html"><span class="sb-num">01</span><div><div class="sb-t">Bästa miniprojektorer 2026</div><div class="sb-m">Guide · 22 maj 2026</div></div></a></li>
+        <li><a href="hemmabio-setup-guide.html"><span class="sb-num">02</span><div><div class="sb-t">Bygg ditt hemmabio från grunden</div><div class="sb-m">Guide · 14 maj 2026</div></div></a></li>
+        <li><a href="projektor-eller-oled.html"><span class="sb-num">03</span><div><div class="sb-t">Projektor eller OLED-TV</div><div class="sb-m">Jämförelse · 4 apr 2026</div></div></a></li>
+        <li><a href="dolby-atmos-hemma.html"><span class="sb-num">04</span><div><div class="sb-t">Dolby Atmos hemma: värt det?</div><div class="sb-m">Teknik · 29 apr 2026</div></div></a></li>
+      </ul>
+    </div>
+  </aside>
+</div>
+
+<footer>
+  <div class="foot-wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">HemmaBio<em>Guiden</em></div>
+        <p class="foot-desc">Oberoende blogg om hemmabio, projektorer och ljud sedan 2023. Vi testar och granskar utan koppling till någon butik eller tillverkare.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Populära artiklar</h4>
+        <ul>
+          <li><a href="basta-miniprojektorer-2026.html">Bästa miniprojektorer 2026</a></li>
+          <li><a href="minilux-pro-test.html">MiniLux Pro recension</a></li>
+          <li><a href="hemmabio-setup-guide.html">Bygg ditt hemmabio</a></li>
+          <li><a href="projektor-eller-oled.html">Projektor eller OLED</a></li>
+          <li><a href="dolby-atmos-hemma.html">Dolby Atmos hemma</a></li>
+          <li><a href="sovrumsprojektor-guide.html">Projektor i sovrummet</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Kategorier</h4>
+        <ul>
+          <li><a href="#">Guider</a></li>
+          <li><a href="#">Recensioner</a></li>
+          <li><a href="#">Projektorer</a></li>
+          <li><a href="#">Ljud</a></li>
+          <li><a href="#">Streaming</a></li>
+          <li><a href="#">Tips</a></li>
+          <li><a href="#">Jämförelser</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <p>&copy; 2026 HemmaBioGuiden.se. Oberoende granskning</p>
+      <p>Alla tester utförs utan ersättning från tillverkare</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Bygg ditt hemmabio från grunden: komplett startguide 2026 | HemmaBioGuiden.se</title>
+<meta name="description" content="Steg-för-steg-guide till hemmabio: projektor, duk, ljud och streaming. Oberoende råd för alla budgetar."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{background:#f8f7f4;color:#1e1e1e;font-family:'DM Sans',sans-serif;font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased}
+nav{background:#fff;border-bottom:1px solid #e9e6e0;position:sticky;top:0;z-index:100;padding:0 2rem}
+.nav-row1{display:flex;align-items:center;justify-content:space-between;height:68px}
+.brand{font-family:'DM Serif Display',serif;font-size:1.6rem;color:#1e1e1e;text-decoration:none}
+.brand em{color:#2e7d6b;font-style:normal}
+.nav-right{display:flex;align-items:center;gap:1.5rem}
+.nav-right a{font-size:.82rem;font-weight:500;color:#888;text-decoration:none;transition:color .2s}
+.nav-right a:hover{color:#1e1e1e}
+.nav-row2{display:flex;gap:0;border-top:1px solid #f0ede8;overflow-x:auto}
+.nav-row2 a{font-size:.75rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#888;text-decoration:none;padding:.6rem 1.1rem;white-space:nowrap;border-bottom:2px solid transparent;transition:all .15s}
+.nav-row2 a:hover{color:#1e1e1e;border-bottom-color:#1e1e1e}
+.nav-row2 a.on{color:#2e7d6b;border-bottom-color:#2e7d6b}
+.wrap{max-width:1160px;margin:0 auto;padding:2.5rem 2rem 5rem;display:grid;grid-template-columns:1fr 290px;gap:4rem}
+.art-tag{font-size:.62rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#2e7d6b;margin-bottom:.6rem}
+h1{font-family:'DM Serif Display',serif;font-size:clamp(1.7rem,3.5vw,2.4rem);line-height:1.2;color:#1e1e1e;margin-bottom:.8rem}
+.art-intro{font-family:'DM Serif Display',serif;font-style:italic;font-size:1.05rem;color:#555;line-height:1.75;margin-bottom:1.5rem;padding-bottom:1.5rem;border-bottom:1px solid #e9e6e0}
+.art-meta{display:flex;align-items:center;gap:.5rem;font-size:.73rem;color:#aaa;margin-bottom:1.5rem;flex-wrap:wrap}
+.dot{width:3px;height:3px;border-radius:50%;background:#ccc;display:inline-block}
+.art-img{border-radius:6px;aspect-ratio:16/7;display:flex;align-items:center;justify-content:center;font-size:.75rem;color:#bbb;margin-bottom:1.5rem;background:#e8f0ee}
+.body{font-size:.98rem;color:#2a2a2a;line-height:1.85}
+.body p{margin-bottom:1.2rem}
+.body h2{font-family:'DM Serif Display',serif;font-size:1.35rem;margin:2.2rem 0 .7rem;color:#1e1e1e}
+.body h3{font-size:1rem;font-weight:600;margin:1.5rem 0 .5rem;color:#1e1e1e}
+.body ul,.body ol{padding-left:1.4rem;margin-bottom:1.2rem}
+.body li{margin-bottom:.5rem}
+.body a{color:#2e7d6b;font-weight:500}
+.callout{background:#fff;border-left:3px solid #2e7d6b;padding:1rem 1.2rem;margin:1.5rem 0;border-radius:0 4px 4px 0;border:1px solid #e9e6e0;border-left-width:3px}
+.callout p{margin:0;font-size:.92rem;color:#555;font-style:italic;line-height:1.7}
+.rank-item{background:#fff;border:1px solid #e9e6e0;border-radius:6px;padding:1.4rem;margin:1.2rem 0}
+.rank-item h3{font-family:'DM Serif Display',serif;font-size:1.1rem;margin-bottom:.5rem}
+.rank-badge{display:inline-block;background:#2e7d6b;color:#fff;font-size:.7rem;font-weight:700;padding:.2rem .6rem;border-radius:3px;margin-right:.5rem}
+.score-inline{font-weight:600;color:#2e7d6b}
+.pc{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1rem 0}
+.pc-box{background:#faf9f6;border-radius:4px;padding:.9rem}
+.pc-box h4{font-size:.63rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.5rem}
+.pros h4{color:#2e7d6b}.cons h4{color:#c0392b}
+.pc-box ul{list-style:none;font-size:.84rem;color:#555}
+.pc-box li{padding:.25rem 0}
+.cta-box{background:#1e1e1e;border-radius:6px;padding:1.8rem;margin:2rem 0;text-align:center}
+.cta-box p{color:rgba(255,255,255,.75);font-size:.9rem;margin-bottom:1rem;line-height:1.6}
+.cta-box a{color:#7dd6c3;font-weight:600}
+.author-box{background:#fff;border:1px solid #e9e6e0;border-radius:6px;padding:1.6rem;margin-top:2.5rem;display:flex;gap:1.2rem}
+.av-lg{width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.95rem;font-weight:700;flex-shrink:0}
+.bio-expert{font-size:.6rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#2e7d6b;margin-bottom:.2rem}
+.bio-name{font-family:'DM Serif Display',serif;font-size:1.1rem;color:#1e1e1e;margin-bottom:.1rem}
+.bio-role{font-size:.78rem;color:#aaa;font-style:italic;margin-bottom:.7rem}
+.bio-text{font-size:.84rem;color:#666;line-height:1.65;margin-bottom:.8rem}
+.bio-stats{display:flex;gap:1.5rem;flex-wrap:wrap}
+.bs strong{display:block;font-family:'DM Serif Display',serif;font-size:1rem;color:#1e1e1e}
+.bs span{font-size:.68rem;color:#aaa;text-transform:uppercase;letter-spacing:.05em}
+.related{margin-top:2.5rem;padding-top:2rem;border-top:1px solid #e9e6e0}
+.rel-head{font-size:.65rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:#aaa;margin-bottom:1.2rem}
+.rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.rel-card{text-decoration:none;color:inherit;background:#fff;border:1px solid #e9e6e0;border-radius:6px;overflow:hidden;transition:box-shadow .2s}
+.rel-card:hover{box-shadow:0 4px 16px rgba(0,0,0,.06)}
+.rel-img{aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;font-size:.7rem;color:#ccc;background:#f0ede8}
+.rel-body{padding:.85rem}
+.rel-cat{font-size:.6rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#2e7d6b;display:block;margin-bottom:.25rem}
+.rel-title{font-family:'DM Serif Display',serif;font-size:.88rem;line-height:1.35;color:#1e1e1e}
+aside{padding-top:0}
+.sb-block{margin-bottom:2rem}
+.sb-head{font-size:.63rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:#aaa;border-bottom:1px solid #e9e6e0;padding-bottom:.5rem;margin-bottom:1rem}
+.toc-list{list-style:none}
+.toc-list li{border-bottom:1px solid #f5f2ee}
+.toc-list a{display:block;padding:.5rem 0;font-size:.82rem;color:#666;text-decoration:none;transition:color .2s}
+.toc-list a:hover{color:#2e7d6b}
+.sb-list{list-style:none}
+.sb-list li{border-bottom:1px solid #f5f2ee}
+.sb-list a{display:flex;gap:.7rem;padding:.65rem 0;text-decoration:none;align-items:flex-start}
+.sb-list a:hover .sb-t{color:#2e7d6b}
+.sb-num{font-family:'DM Serif Display',serif;font-size:1rem;color:#e0ddd8;flex-shrink:0;width:20px;line-height:1.2}
+.sb-t{font-size:.8rem;font-weight:500;color:#333;line-height:1.3;transition:color .2s}
+.sb-m{font-size:.67rem;color:#bbb;margin-top:.1rem}
+footer{background:#1e1e1e;color:#fff;padding:3rem 2rem 2rem;margin-top:3rem}
+.foot-wrap{max-width:1160px;margin:0 auto}
+.foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:2.5rem;margin-bottom:2.5rem}
+.foot-brand{font-family:'DM Serif Display',serif;font-size:1.2rem;color:#fff;margin-bottom:.5rem}
+.foot-brand em{color:#7dd6c3;font-style:normal}
+.foot-desc{font-size:.8rem;color:#666;line-height:1.65;max-width:280px}
+.foot-col h4{font-size:.63rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#555;margin-bottom:.9rem;padding-bottom:.4rem;border-bottom:1px solid #2a2a2a}
+.foot-col ul{list-style:none}
+.foot-col li{margin-bottom:.45rem}
+.foot-col a{font-size:.8rem;color:#666;text-decoration:none;transition:color .2s}
+.foot-col a:hover{color:#7dd6c3}
+.foot-bottom{padding-top:1.5rem;border-top:1px solid #2a2a2a;display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem}
+.foot-bottom p{font-size:.73rem;color:#666}
+.foot-bottom a{color:#7dd6c3;text-decoration:none}
+.foot-bottom a:hover{text-decoration:underline}
+@media(max-width:900px){.wrap{grid-template-columns:1fr}aside{display:none}.rel-grid,.pc{grid-template-columns:1fr}.foot-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:540px){.rel-grid,.pc{grid-template-columns:1fr}.author-box{flex-direction:column}.foot-grid{grid-template-columns:1fr}}
+
+.art-tag{color:#2e7d6b}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-row1">
+    <a class="brand" href="index.html">HemmaBio<em>Guiden</em></a>
+    <div class="nav-right">
+      <a href="om-oss.html">Om oss</a>
+      <a href="kontakt.html">Kontakt</a>
+    </div>
+  </div>
+  <div class="nav-row2">
+    <a href="index.html">Alla</a>
+    <a href="kategori-guider.html" class="on">Guider</a>
+    <a href="kategori-recensioner.html">Recensioner</a>
+    <a href="kategori-projektorer.html">Projektorer</a>
+    <a href="kategori-tips.html">Ljud</a>
+    <a href="streaming-kvalitet-guide.html">Streamning</a>
+    <a href="kategori-tips.html">Tips</a>
+    <a href="kategori-jamforelser.html">Jämförelser</a>
+  </div>
+</nav>
+<div class="wrap">
+<article>
+<div class="art-tag">Guide</div>
+<h1>Bygg ditt hemmabio från grunden: komplett startguide 2026</h1>
+<p class="art-intro">Ett hemmabio behöver inte kosta en förmögenhet. Med rätt prioriteringar kan du bygga en setup som överträffar biografupplevelsen hemma – om du vet var pengarna gör störst skillnad.</p>
+<div class="art-meta">
+  <strong>Lisa Strand</strong><span class="dot"></span>
+  <span>14 maj 2026</span><span class="dot"></span>
+  <span>14 min läsning</span>
+</div>
+<div class="art-img">[ Omslagsbild ]</div>
+<div class="body">
+<p>Att bygga hemmabio handlar mindre om att köpa dyrast möjligt utan om att förstå hur komponenterna samverkar. Vi har hjälpt hundratals läsare planera sina första setup och ser samma misstag om och om igen: för mycket pengar på projektorn, för lite på ljudet, och ingen plan för ljus i rummet.</p>
+<p>Den här guiden tar dig från tom vägg till första filmkvällen. Vi utgår från en typisk svensk lägenhet eller villa med vardagsrum som primärt tittarum, men principerna gäller sovrum och källare också. Läs gärna vår <a href="sovrumsprojektor-guide.html">sovrumsguide</a> parallellt om det är ditt huvudscenario.</p><h2 id="planera-rummet">Planera rummet</h2><p>Börja med avståndet. Mät hur långt soffan eller sängen sitter från väggen där bilden ska hamna. Det avgör bildstorlek och vilken upplösning som faktiskt märks. På tre meters avstånd till en 100-tums bild är 1080p ofta tillräckligt – vi förklarar varför i <a href="4k-vs-1080p-projektor.html">4K vs 1080p</a>.</p>
+<p>Kontrollera ljuset. Har du fönster som inte går att mörklägga behöver du högre ANSI-lumen än om rummet redan är mörkt. En projektor som ser fantastisk ut i butikens mörka demo kan blekna i ett vardagsrum med gardiner som släpper igenom kvällssol.</p>
+<p>Tänk på kablar tidigt. HDMI genom vägg, eluttag bakom duken och nätverksuttag nära projektorn sparar frustration. Trådlös streaming minskar behovet av HDMI men kräver stabilt WiFi – se <a href="wifi-streaming-projektor.html">WiFi i projektorer</a>.</p><h2 id="välj-projektor">Välj projektor</h2><p>För de flesta räcker en miniprojektor i prisklassen 3 000–6 000 kronor som första val. Vår <a href="basta-miniprojektorer-2026.html">topplista 2026</a> visar vilka modeller som presterar i praktiken. Prioritera ANSI-lumen framför LED-lumen, autofokus om projektorn flyttas och inbyggd streaming om du vill undvika extra boxar.</p>
+<p>Kortkastare (ultra short throw) är bra om projektorn ska stå på TV-bänket, men kostar mer. Vanlig kastlängd ger flexibilitet att montera i tak eller på hylla bakom soffan. Rotationsfot – som på MiniLux Pro – öppnar sovrumsscenario utan extra stativ.</p><h2 id="duk-och-bild">Duk och bild</h2><p>En vit vägg fungerar som provisorisk lösning men en duk med rätt gain höjer kontrasten märkbart. Vi testade fyra ytor i <a href="duk-eller-vagg.html">duk eller vägg</a> och såg upp till 40 procent bättre upplevd svärta med en grå duk i ljusa rum.</p>
+<p>Montera duken i ögonhöjd från sittposition eller något högre om du tittar från soffa. Undvik att projicera mot fönster – även med duk blir kontrasten lidande.</p><h2 id="ljud">Ljud</h2><p>Inbyggda högtalare i miniprojektorer räcker för nyheter och YouTube, inte för film. Budgetera minst 1 500 kronor till extern ljudlösning. En soundbar är enklast; surround kräver mer utrymme men ger mer immersion. Läs <a href="soundbar-guide-2026.html">soundbar eller surround</a> och <a href="dolby-atmos-hemma.html">Dolby Atmos hemma</a> för att välja rätt nivå.</p>
+<p>Bluetooth-högtalare fungerar men kan ge synklipp. HDMI ARC från projektor till soundbar är att föredra om din modell stödjer det. Vår lista <a href="bluetooth-hogtalare-projektor.html">bästa Bluetooth-högtalare</a> hjälper om trådlöst är enda alternativet.</p><h2 id="streaming">Streaming</h2><p>Inbyggda Android TV eller Google TV i projektorn minskar antalet fjärrkontroller. Annars: Apple TV 4K, Chromecast eller Fire Stick. Jämför bildkvalitet mellan tjänster i vår <a href="streaming-kvalitet-guide.html">streamingguide</a> – skillnaderna i bitrate är större än många tror.</p>
+<p>Se till att projektorn stödjer HDR om ditt innehåll är HDR – men ha realistiska förväntningar i budgetklassen. Läs <a href="hdr-forklarat.html">HDR förklarat</a> innan du betalar extra för en funktion du kanske inte ser.</p><h2 id="rumsoptimering">Rumsoptimering</h2><p>Mörkläggning är den billigaste förbättringen du kan göra. Mörkläggningsgardiner eller rullgardiner i flera lager slår ofta en dyrare projektor. Måla väggar runt duken i mörkare nyans om du vill minska ljusreflektioner – halvmatt mörkgrå fungerar bättre än vitt.</p>
+<p>Placera soffan så att huvudet hamnar ungefär i mitten av bildens höjd. Undvik att sitta för nära: ögonen ska kunna svepa över hela bilden utan att vrida huvudet. I smala rum kan en kortare kastlängd eller takmontering frigöra golvyta.</p>
+<p>Akustik påverkar ljud mer än många tror. En enkel matta, tunna gardiner och att undvika tomma hörn minskar ek som annars gör dialog otydlig. Läs mer om ljudval i vår <a href="soundbar-guide-2026.html">soundbar-guide</a>.</p><h2 id="kabelhantering">Kabelhantering</h2><p>Planera strömmen innan du borrar. Projektorn behöver ett eget uttag eller grenuttag med jord – dela inte med lampa som dimras. HDMI-kabeln ska vara minst 2.0 om du kör 4K60; vi testade billiga och dyra kablar i <a href="hdmi-kablar-sanning.html">HDMI-artikeln</a> och såg ingen skillnad under fem meter.</p>
+<p>För takmontering: mät exakt avstånd och vinkel innan du köper fäste. Kabelkanaler längs taklist eller innertak ger renare resultat än lös kabel. Märk kablarna med maskingtejp så du vet vad som går till projektor, soundbar och streamer.</p>
+<p>Trådlös streaming minskar HDMI-behovet men kräver stabilt nätverk. Placera routern så att signalen inte måste genom flera betongväggar – se <a href="wifi-streaming-projektor.html">WiFi i projektorer</a> om buffring plågar dig.</p><h2 id="kalibrering">Kalibrering</h2><p>Ställ in grundläggande bildläge: välj film eller cinema-läge, sänk skärpa om bilden ser konstgjord ut, och justera keystone minimalt – fysisk justering av projektorn ger bättre resultat än digital keystone.</p>
+<p>Mät ljudnivå ungefärligt med en telefon-app för att undvika att första explosionen väcker grannarna. Subwoofern ska komplettera, inte dominera.</p><h2 id="vanliga-misstag">Vanliga misstag</h2><p>Köpa för lite ljusstyrka för rummet. Tro att 4K alltid är nödvändigt. Ignorera ljud helt. Placera projektorn så att någon går genom bilden. Använda billiga HDMI-kablar som inte klarar bandbredd – vi testade det i <a href="hdmi-kablar-sanning.html">HDMI-artikeln</a>.</p>
+<p>Med en genomtänkt plan kan du ha en fungerande hemmabio på en helg. Börja med projektor och ljud, lägg till duk vecka två, och finjustera därefter. Det är bättre än att vänta tills budgeten räcker till allt på en gång – och aldrig komma igång.</p>
+</div>
+<div class="author-box">
+  <div class="av-lg" style="background:#ddf0eb;color:#2e7d6b">LS</div>
+  <div>
+    <div class="bio-expert">Chefredaktör och hemmabioexpert</div>
+    <div class="bio-name">Lisa Strand</div>
+    <div class="bio-role">Chefredaktör, HemmaBioGuiden.se</div>
+    <p class="bio-text">Lisa har granskat hemmabioprodukter i åtta år för Ljud och Bild samt Råd och Rön teknik. Hon specialiserar sig på projektorer och streaminglösningar. Alla produkter köps med egna medel utan ersättning från tillverkare.</p>
+    <div class="bio-stats">
+      <div class="bs"><strong>8 år</strong><span>Erfarenhet</span></div>
+      <div class="bs"><strong>250+</strong><span>Produkter testade</span></div>
+      <div class="bs"><strong>55+</strong><span>Projektorer recenserade</span></div>
+    </div>
+  </div>
+</div>
+<div class="related">
+  <div class="rel-head">Relaterade artiklar</div>
+  <div class="rel-grid">
+        <a class="rel-card" href="basta-miniprojektorer-2026.html"><div class="rel-img">[ Bild ]</div><div class="rel-body"><span class="rel-cat">Guide</span><div class="rel-title">Bästa miniprojektorer 2026</div></div></a>
+    <a class="rel-card" href="dolby-atmos-hemma.html"><div class="rel-img">[ Bild ]</div><div class="rel-body"><span class="rel-cat">Teknik</span><div class="rel-title">Dolby Atmos hemma</div></div></a>
+    <a class="rel-card" href="ljusstyrka-projektor.html"><div class="rel-img">[ Bild ]</div><div class="rel-body"><span class="rel-cat">Guide</span><div class="rel-title">Ljusstyrka förklarad</div></div></a>
+  </div>
+</div>
+</article>
+<aside>
+<div class="sb-block">
+    <div class="sb-head">Innehåll</div>
+    <ul class="toc-list">
+      <li><a href="#planera-rummet">Planera rummet</a></li>
+      <li><a href="#valj-projektor">Välj projektor</a></li>
+      <li><a href="#duk-och-bild">Duk och bild</a></li>
+      <li><a href="#ljud">Ljud</a></li>
+      <li><a href="#streaming">Streaming</a></li>
+      <li><a href="#rumsoptimering">Rumsoptimering</a></li>
+      <li><a href="#kabelhantering">Kabelhantering</a></li>
+      <li><a href="#kalibrering">Kalibrering</a></li>
+      <li><a href="#vanliga-misstag">Vanliga misstag</a></li>
+    </ul>
+  </div>
+  <div class="sb-block">
+    <div class="sb-head">Mest lästa</div>
+    <ul class="sb-list">
+      <li><a href="basta-miniprojektorer-2026.html"><span class="sb-num">01</span><div><div class="sb-t">Bästa miniprojektorer 2026</div><div class="sb-m">Guide · maj 2026</div></div></a></li>
+      <li><a href="minilux-pro-test.html"><span class="sb-num">02</span><div><div class="sb-t">MiniLux Pro test</div><div class="sb-m">Recension · maj 2026</div></div></a></li>
+      <li><a href="projektor-eller-oled.html"><span class="sb-num">03</span><div><div class="sb-t">Projektor eller OLED</div><div class="sb-m">Jämförelse · apr 2026</div></div></a></li>
+    </ul>
+  </div>
+</aside>
+</div>
+<footer>
+  <div class="foot-wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">HemmaBio<em>Guiden</em></div>
+        <p class="foot-desc">Oberoende blogg om hemmabio, projektorer och ljud sedan 2023. Vi testar och granskar utan koppling till någon butik eller tillverkare.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Populära artiklar</h4>
+        <ul>
+        <li><a href="basta-miniprojektorer-2026.html">Bästa miniprojektorer 2026</a></li>
+        <li><a href="minilux-pro-test.html">MiniLux Pro recension</a></li>
+        <li><a href="hemmabio-setup-guide.html">Bygg ditt hemmabio</a></li>
+        <li><a href="projektor-eller-oled.html">Projektor eller OLED</a></li>
+        <li><a href="dolby-atmos-hemma.html">Dolby Atmos hemma</a></li>
+        <li><a href="sovrumsprojektor-guide.html">Projektor i sovrummet</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Kategorier</h4>
+        <ul>
+        <li><a href="kategori-guider.html">Guider</a></li>
+        <li><a href="kategori-recensioner.html">Recensioner</a></li>
+        <li><a href="kategori-projektorer.html">Projektorer</a></li>
+        <li><a href="kategori-tips.html">Ljud &amp; tips</a></li>
+        <li><a href="streaming-kvalitet-guide.html">Streaming</a></li>
+        <li><a href="kategori-jamforelser.html">Jämförelser</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <p>&copy; 2026 HemmaBioGuiden.se · <a href="om-oss.html">Om oss</a> · <a href="kontakt.html">Kontakt</a> · <a href="integritetspolicy.html">Integritetspolicy</a></p>
+      <p>Alla tester utförs utan ersättning från tillverkare</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

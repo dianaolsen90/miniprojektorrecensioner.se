@@ -37,7 +37,9 @@ h1{font-family:'DM Serif Display',serif;font-size:clamp(1.7rem,3.5vw,2.4rem);lin
 .trust-item strong{display:block;font-size:.82rem;font-weight:600;color:#1e1e1e}
 .trust-item span{font-size:.72rem;color:#aaa}
 /* IMAGES */
-.art-img{border-radius:6px;aspect-ratio:16/7;display:flex;align-items:center;justify-content:center;font-size:.75rem;color:#bbb;margin-bottom:1.5rem;background:#e8f0ee}
+.art-img{border-radius:6px;aspect-ratio:16/7;display:flex;align-items:center;justify-content:center;font-size:.75rem;color:#bbb;margin-bottom:1.5rem;background:#e8f0ee;overflow:hidden}
+.art-img-photo{aspect-ratio:auto;background:#0d1117;padding:0}
+.art-img-photo img{width:100%;max-height:520px;object-fit:contain;object-position:center;display:block;margin:0 auto}
 .img-half{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.5rem 0}
 .img-half-item{border-radius:6px;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;font-size:.72rem;color:#bbb}
 .img-h-a{background:#e8f0ee}.img-h-b{background:#f0ece6}
@@ -181,7 +183,9 @@ footer{background:#1e1e1e;color:#fff;padding:3rem 2rem 2rem;margin-top:3rem}
   <div class="trust-item"><span class="trust-icon">✅</span><strong>Köpt själva</strong><span>Ej sponsrat</span></div>
 </div>
 
-<div class="art-img">[ Huvudbild: MiniLux Pro på ett bord med projicerad bild på väggen bakom ]</div>
+<div class="art-img art-img-photo">
+  <img src="minilux-pro-hero.png" alt="MiniLux Pro Version 2 smart miniprojektor med WiFi, Bluetooth och 4K-stöd" width="800" height="1200" loading="eager"/>
+</div>
 
 <div class="body">
 <p>MiniLux Pro är en av de mer omtalade miniprojektorerna i mellanklass just nu. Specifikationslistan ser bra ut på papper: WiFi 6, hybrid-autofokus, 480 ANSI Lumen och en roterbar fot som låter dig projicera mot taket. Men specifikationer är en sak. Vardaglig användning är en annan.</p>
@@ -289,7 +293,7 @@ footer{background:#1e1e1e;color:#fff;padding:3rem 2rem 2rem;margin-top:3rem}
 
 <div class="cta-box">
   <p>Vill du läsa mer om produkten eller se aktuellt pris?</p>
-  <a href="https://www.miniprojekter.se/minilux-pro" rel="dofollow" class="cta-btn">MiniLux Pro</a>
+  <a href="https://miniprojektor.se/products/minilux-pro-smart-miniprojektor" rel="dofollow" class="cta-btn">MiniLux Pro</a>
 </div>
 
 </div>

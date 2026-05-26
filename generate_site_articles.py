@@ -272,7 +272,7 @@ def populate_remaining_articles(_p):
             "Båda mediokra – planera extern högtalare.",
         ) + '<h2 id="pris-och-värde">Pris och värde</h2>' + _p(
             "Pro för veckorutin och halvljus. Bas för månadskväll i mörker. <a href=\"minilux-pro-test.html\">Pro-test</a>, #2 i <a href=\"basta-miniprojektorer-2026.html\">topplistan</a>.",
-        ) + '<div class="cta-box"><p>Vill du jämföra specs? Besök <a href="https://miniprojekter.se/minilux" rel="dofollow">MiniLux</a> och <a href="https://miniprojekter.se/minilux-pro" rel="dofollow">MiniLux Pro</a> hos återförsäljaren. Ingen provision till oss.</p></div>'
+        ) + '<div class="cta-box"><p>Vill du jämföra specs? Besök <a href="https://miniprojekter.se/minilux" rel="dofollow">MiniLux</a> och <a href="https://miniprojektor.se/products/minilux-pro-smart-miniprojektor" rel="dofollow">MiniLux Pro</a> hos återförsäljaren. Ingen provision till oss.</p></div>'
         + minilux_extra,
     )
 

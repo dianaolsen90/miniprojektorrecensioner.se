@@ -34,10 +34,12 @@ h1{font-family:'DM Serif Display',serif;font-size:clamp(1.7rem,3.5vw,2.4rem);lin
 .trust-icon{font-size:1.2rem;display:block;margin-bottom:.3rem}
 .trust-item strong{display:block;font-size:.82rem;font-weight:600;color:#1e1e1e}
 .trust-item span{font-size:.72rem;color:#aaa}
-.art-img{border-radius:6px;aspect-ratio:16/7;display:flex;align-items:center;justify-content:center;font-size:.75rem;color:#bbb;margin-bottom:1.5rem;background:#e8f0ee}
+.art-img{border-radius:6px;aspect-ratio:16/7;display:flex;align-items:center;justify-content:center;font-size:.75rem;color:#bbb;margin-bottom:1.5rem;background:#e8f0ee;overflow:hidden}
+.art-img-photo{aspect-ratio:auto;background:#0d1117;padding:0}
+.art-img-photo img{width:100%;max-height:520px;object-fit:contain;object-position:center;display:block;margin:0 auto}
 .img-half{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.5rem 0}
-.img-half-item{border-radius:6px;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;font-size:.72rem;color:#bbb}
-.img-h-a{background:#e8f0ee}.img-h-b{background:#f0ece6}
+.img-half-item{border-radius:6px;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;font-size:.72rem;color:#bbb;overflow:hidden;background:#0d1117}
+.img-half-item img{width:100%;height:100%;object-fit:contain;display:block}
 .img-caption{font-size:.72rem;color:#aaa;text-align:center;margin-top:.4rem;font-style:italic}
 .compare-box{background:#fff;border:1px solid #e9e6e0;border-radius:6px;overflow:hidden;margin:1.5rem 0}
 .compare-head{display:grid;grid-template-columns:1fr 1fr 1fr;background:#f5f2ee;font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#888}
@@ -177,7 +179,9 @@ footer{background:#1e1e1e;color:#fff;padding:3rem 2rem 2rem;margin-top:3rem}
   <div class="trust-item"><span class="trust-icon">✅</span><strong>Köpt själva</strong><span>Ej sponsrat</span></div>
 </div>
 
-<div class="art-img">[ Huvudbild: MiniLux Pro 2 bredvid MiniLux Pro 1, sida vid sida ]</div>
+<div class="art-img art-img-photo">
+  <img src="minilux-pro-2-vit.png" alt="MiniLux Pro 2 i vit färg med WiFi, Bluetooth och 4K-stöd" width="800" height="1200" loading="eager"/>
+</div>
 
 <div class="body">
 <p>Vi testade MiniLux Pro (ettan) i 47 timmar tidigare i år. Nu har MiniLux Pro 2 lanserats med tre tydliga uppgraderingar: AI-autofokus istället för hybrid-autofokus, 550 ANSI Lumen mot föregångarens 480 och ett förbättrat inbyggt ljud. Vi köpte tvåan och testade den i 52 timmar för att avgöra om uppgraderingen är värd det.</p>
@@ -192,14 +196,15 @@ footer{background:#1e1e1e;color:#fff;padding:3rem 2rem 2rem;margin-top:3rem}
 
 <div class="img-half">
   <div>
-    <div class="img-half-item img-h-a">[ Bild: MiniLux Pro 2 ovanifrån ]</div>
-    <p class="img-caption">MiniLux Pro 2 sedd ovanifrån med ny ventilationsdesign</p>
+    <div class="img-half-item"><img src="minilux-pro-2-vit.png" alt="MiniLux Pro 2 vit färg" width="600" height="800" loading="lazy"/></div>
+    <p class="img-caption">Vit – passar ljust inredda rum och sovrum</p>
   </div>
   <div>
-    <div class="img-half-item img-h-b">[ Bild: AI-autofokus-sensor på framsidan ]</div>
-    <p class="img-caption">Den nya AI-autofokus-sensorn syns tydligt på framsidan</p>
+    <div class="img-half-item"><img src="minilux-pro-2-svart.png" alt="MiniLux Pro 2 svart färg med fjärrkontroll" width="600" height="800" loading="lazy"/></div>
+    <p class="img-caption">Svart – medföljande fjärrkontroll ingår i båda varianterna</p>
   </div>
 </div>
+<p>MiniLux Pro 2 säljs i två färger: vit och svart. Specifikationerna är identiska oavsett färg – skillnaden är enbart höljet. Välj utifrån hur projektorn ska synas i rummet, inte utifrån prestanda.</p>
 
 <h2 id="autofokus">AI-autofokus: märks det?</h2>
 <p>Kort svar: ja, markant. Hybrid-autofokusen i ettan tog 2-3 sekunder och behövde sedan stå still. AI-autofokusen i tvåan hittar skärpan på under en sekund och håller den kontinuerligt. Rör du projektorn justeras fokus omedelbart utan att du märker en mellansekund av oskärpa.</p>
@@ -287,7 +292,7 @@ footer{background:#1e1e1e;color:#fff;padding:3rem 2rem 2rem;margin-top:3rem}
 
 <div class="cta-box">
   <p>Se aktuellt pris och tillgänglighet direkt hos återförsäljaren.</p>
-  <a href="https://www.miniprojekter.se/minilux-pro-2" rel="dofollow" class="cta-btn">MiniLux Pro 2</a>
+  <a href="https://miniprojektor.se/products/minilux-pro-2-smart-miniprojektor-med-bluetooth-och-wifi-svart" rel="dofollow" class="cta-btn">MiniLux Pro 2</a>
 </div>
 
 </div>

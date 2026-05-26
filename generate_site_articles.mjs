@@ -421,7 +421,7 @@ export function populateRemainingArticles(_p) {
       "Vardagsrum på helg, sovrum på vardagskväll fungerar för många. Mörkläggning behöver inte vara perfekt för ljusa barnfilmer men hjälper i HDR.",
       'Utomhus: kortare film, tidigare start. <a href="projektor-utomhus.html">Utomhusguiden</a>.',
     ) + '<h2 id="rekommendationer">Rekommendationer</h2>' + _p(
-      'Prioritera autofokus och tillräcklig ljusstyrka. Jämför i <a href="basta-miniprojektorer-2026.html">topplistan 2026</a> och <a href="minilux-vs-pro.html">MiniLux vs MiniLux Pro</a> om ni väljer den serien.',
+      'Prioritera autofokus och tillräcklig ljusstyrka. Jämför i <a href="basta-miniprojektorer-2026.html">topplistan 2026</a> och <a href="minilux-vs-pro.html">MiniLux Pro vs MiniLux Pro 2</a> om ni väljer den serien.',
       "Lägg budget på ljud och säker kabeldragning före sista lumen-procenten.",
     ) + '<h2 id="vanliga-misstag">Vanliga misstag</h2>' + _p(
       "Låta barn styra fjärrkontrollen utan gränser – plötslig maxvolym och blinkande menyer stressar små barn.",
@@ -449,12 +449,12 @@ export function populateRemainingArticles(_p) {
   });
 
   art("minilux-vs-pro.html", {
-    title: "MiniLux mot MiniLux Pro: vad får du mer för pengarna?",
-    description: "Jämförelse MiniLux vs MiniLux Pro efter praktiskt test.",
+    title: "MiniLux Pro mot MiniLux Pro 2: vad får du mer för pengarna?",
+    description: "Jämförelse MiniLux Pro vs MiniLux Pro 2 efter praktiskt test.",
     category: "Jämförelse", author: "MK", date: "15 mar 2026", read_time: "9 min",
     nav_active: "kategori-jamforelser.html",
-    intro: "Samma familj, olika pris – vi testade bas-MiniLux och MiniLux Pro sida vid sida i tio vardagsscenarion under tre veckor.",
-    toc: ["Tio vardagsscenarier", "Batteri och ström", "WiFi 5 mot WiFi 6", "Autofokus och bild", "Ljud och pris"],
+    intro: "Samma produktfamilj, nästa generation – vi testade MiniLux Pro och MiniLux Pro 2 sida vid sida i tio vardagsscenarion under tre veckor.",
+    toc: ["Tio vardagsscenarier", "Batteri och ström", "AI-autofokus och keystone", "Ljusstyrka: 480 mot 550", "WiFi 6 mot WiFi 6E", "Ljud och pris"],
     related: [
       ["minilux-pro-test.html", "Recension", "MiniLux Pro test", ""],
       ["basta-miniprojektorer-2026.html", "Guide", "Topplista", ""],
@@ -526,7 +526,7 @@ export function populateRemainingArticles(_p) {
     ) + '<h2 id="generationer">Generationer</h2>' + _p(
       "WiFi 5 (802.11ac) är fortfarande vanligt på budgetprojektorer. WiFi 6 (802.11ax) ger bättre hantering av många enheter och lägre latens i teorin – i praktiken beror det på routerplacering och ISP.",
       "WiFi 6E kräver router med 6 GHz-band. Få projektorer stödjer 6E idag; för de flesta är det inte värt att köpa ny router enbart för projektorn.",
-      'Jämförelse MiniLux bas (WiFi 5) mot Pro (WiFi 6) i vardagsscenarier: <a href="minilux-vs-pro.html">MiniLux vs MiniLux Pro</a>.',
+      'Jämförelse MiniLux Pro (WiFi 6) mot Pro 2 (WiFi 6E) i vardagsscenarier: <a href="minilux-vs-pro.html">MiniLux Pro vs MiniLux Pro 2</a>.',
     ) + '<h2 id="test">Test</h2>' + _p(
       "Samma 100 tum duk, Netflix 4K-titel med hög bitrate. WiFi 5: tre buffringar på 90 minuter med två telefoner som streamade samtidigt. WiFi 6: en buffring. Ethernet: ingen.",
       '<a href="minilux-pro-test.html">MiniLux Pro</a> med WiFi 6 var stabilt i vårt hem när routern stod i samma våning. I källare med svag mesh-nod buffrade ändå båda generationer.',
@@ -582,7 +582,7 @@ export function populateRemainingArticles(_p) {
     ) + '<h2 id="rotation">Rotation</h2>' + _p(
       "Rotationsfot – som på MiniLux Pro – vinklar mot tak utan extra stativ. Basmodeller utan rotation går men kräver stabil lösning och mer keystone.",
       "Spara vinkel med tejp på stativ eller spara inställning om projektorn har minne. Samma vinkel varje kväll sparar två minuter som känns som tio när du är trött.",
-      'Jämför bas och Pro för sovrum: <a href="minilux-vs-pro.html">MiniLux vs MiniLux Pro</a>.',
+      'Jämför Pro och Pro 2 för sovrum: <a href="minilux-vs-pro.html">MiniLux Pro vs MiniLux Pro 2</a>.',
     ) + '<h2 id="ljud">Ljud</h2>' + _p(
       "Bluetooth-hörlurar till partnern medan du kör högtalare fungerar på vissa projektorer men inte alla – testa innan köp. Låg volym på inbyggt ljud räcker ibland för barnsaga; vuxen film behöver oftast extern lösning.",
       'Vår test av <a href="bluetooth-hogtalare-projektor.html">Bluetooth-högtalare</a> visar synkproblem på dialog – testa innan långfilm.',

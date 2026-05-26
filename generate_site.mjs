@@ -446,7 +446,7 @@ const ARTICLES = {
       _p(
         "Välj Epson om budgeten tillåter och du vill ha en lösning som står kvar i fem år. Välj MiniLux Pro om du vill ha bästa balansen mellan pris, funktioner och vardagsanvändning i sovrum och vardagsrum. MiniLux Pro 2 är rätt om du redan vet att du behöver mer ljus eller snabbare autofokus.",
         'För utomhus och resor: Nebula Capsule 3. Undvik generiska Amazon-modeller om du planerar att titta mer än en gång i månaden. Oavsett val: investera i en rimlig duk eller läs vår artikel <a href="duk-eller-vagg.html">duk eller vägg</a> innan du bestämmer dig.',
-        'Vill du jämföra MiniLux-modellerna direkt? Läs <a href="minilux-vs-pro.html">MiniLux mot MiniLux Pro</a>.',
+        'Vill du jämföra MiniLux-modellerna direkt? Läs <a href="minilux-vs-pro.html">MiniLux Pro mot MiniLux Pro 2</a>.',
       ),
   },
   "hemmabio-setup-guide.html": {

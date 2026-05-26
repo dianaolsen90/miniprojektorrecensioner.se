@@ -254,8 +254,8 @@ def populate_remaining_articles(_p):
     )
 
     art("minilux-vs-pro.html",
-        title="MiniLux mot MiniLux Pro: vad får du mer för pengarna?",
-        description="Jämförelse MiniLux vs MiniLux Pro efter praktiskt test.",
+        title="MiniLux Pro mot MiniLux Pro 2: vad får du mer för pengarna?",
+        description="Jämförelse MiniLux Pro vs MiniLux Pro 2 efter praktiskt test.",
         category="Jämförelse", author="MK", date="15 mar 2026", read_time="9 min",
         nav_active="kategori-jamforelser.html",
         intro="Samma familj, olika pris – vi testade båda i tio vardagsscenarion.",

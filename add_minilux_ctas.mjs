@@ -33,14 +33,14 @@ const H2_CTA_PRO2 = `<div style="background:#f0faf6;border:1px solid #2e7d6b;bor
 const SIDEBAR_CTA_PRO = `<div style="background:#1e1e1e;border-radius:8px;padding:1.4rem;margin-bottom:2rem;text-align:center">
   <div style="font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#7dd6c3;margin-bottom:.5rem">Testad och rekommenderad</div>
   <div style="font-family:'DM Serif Display',serif;font-size:1.1rem;color:#fff;margin-bottom:.4rem">MiniLux Pro</div>
-  <div style="font-size:.78rem;color:rgba(255,255,255,.55);margin-bottom:1rem;line-height:1.5">WiFi 6 · Autofokus · Roterbar fot · 480 ANSI Lumen</div>
+  <div style="font-size:.78rem;color:rgba(255,255,255,.55);margin-bottom:1rem;line-height:1.5">Standard WiFi · 180° lins · 200 ANSI Lumen · 130 tum</div>
   <a href="https://www.miniprojekter.se/minilux-pro" rel="dofollow" style="display:block;background:#2e7d6b;color:#fff;font-size:.85rem;font-weight:600;padding:.65rem;border-radius:6px;text-decoration:none;transition:background .2s">Se pris hos miniprojekter.se →</a>
 </div>`;
 
 const SIDEBAR_CTA_PRO2 = `<div style="background:#1e1e1e;border-radius:8px;padding:1.4rem;margin-bottom:2rem;text-align:center">
   <div style="font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#7dd6c3;margin-bottom:.5rem">Testad och rekommenderad</div>
   <div style="font-family:'DM Serif Display',serif;font-size:1.1rem;color:#fff;margin-bottom:.4rem">MiniLux Pro 2</div>
-  <div style="font-size:.78rem;color:rgba(255,255,255,.55);margin-bottom:1rem;line-height:1.5">AI-autofokus · WiFi 6E · 550 ANSI Lumen · Stereo</div>
+  <div style="font-size:.78rem;color:rgba(255,255,255,.55);margin-bottom:1rem;line-height:1.5">WiFi 6 · 390 ANSI Lumen · 5W HiFi · 150 tum</div>
   <a href="https://www.miniprojekter.se/minilux-pro-2" rel="dofollow" style="display:block;background:#2e7d6b;color:#fff;font-size:.85rem;font-weight:600;padding:.65rem;border-radius:6px;text-decoration:none;transition:background .2s">Se pris hos miniprojekter.se →</a>
 </div>`;
 

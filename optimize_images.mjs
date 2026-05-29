@@ -5,8 +5,20 @@ import path from "path";
 const ROOT = process.cwd();
 const PRODUCT = new Set([
   "minilux-pro-hero.png",
-  "minilux-pro-2-vit.png",
-  "minilux-pro-2-svart.png",
+  "minilux-pro-2-hero.png",
+]);
+
+const SKIP = new Set([
+  "minilux-pro-mini-projektor-4k-wifi-bluetooth-hemmabio.webp",
+  "minilux-pro-hero.webp",
+  "minilux-pro-hero-thumb.webp",
+  "minilux-pro-hero-half.webp",
+  "minilux-pro-hero-card.webp",
+  "minilux-pro-2-mini-projektor-wifi6-4k-bluetooth-hemmabio.webp",
+  "minilux-pro-2-hero.webp",
+  "minilux-pro-2-hero-thumb.webp",
+  "minilux-pro-2-hero-half.webp",
+  "minilux-pro-2-hero-card.webp",
 ]);
 
 const WIDE_W = 800;
@@ -19,7 +31,13 @@ const HALF_H = 270;
 
 const inputs = fs
   .readdirSync(ROOT)
-  .filter((f) => /\.(png|jpe?g)$/i.test(f) && !f.endsWith("-thumb.webp") && !f.endsWith(".webp"));
+  .filter(
+    (f) =>
+      /\.(png|jpe?g)$/i.test(f) &&
+      !f.endsWith("-thumb.webp") &&
+      !f.endsWith(".webp") &&
+      !SKIP.has(f)
+  );
 
 for (const file of inputs) {
   const input = path.join(ROOT, file);

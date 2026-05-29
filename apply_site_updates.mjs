@@ -14,7 +14,7 @@ const FOOT_BOTTOM = `<div class="foot-bottom"><p>&copy; 2026 miniprojektorrecens
 
 const NAV_RIGHT_OLD =
   /<div class="nav-right"><span class="nav-search">&#128269;<\/span><span class="nav-divider"><\/span><span class="nav-avatar">HB<\/span><\/div>/g;
-const NAV_RIGHT_NEW = `<div class="nav-right"><a href="nyhetsbrev.html" style="font-size:12px;color:#4a6280;font-weight:600;text-decoration:none">Nyhetsbrev</a><span class="nav-search">&#128269;</span><span class="nav-divider"></span><span class="nav-avatar">HB</span></div>`;
+const NAV_RIGHT_NEW = `<div class="nav-right"><a href="nyhetsbrev.html" style="font-size:12px;color:#4a6280;font-weight:600;text-decoration:none">Nyhetsbrev</a><span class="nav-search">&#128269;</span><span class="nav-divider"></span><span class="nav-avatar">MR</span></div>`;
 
 const URL_PRO =
   "https://miniprojektor.se/products/minilux-pro-smart-miniprojektor";

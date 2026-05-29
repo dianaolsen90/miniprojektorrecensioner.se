@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Generate HemmaBioGuiden.se static blog (Node.js port of generate_site.py).
+ * Generate miniprojektorrecensioner.se static blog (Node.js port of generate_site.py).
  *
  * Run: node generate_site.mjs
  */
@@ -23,7 +23,7 @@ const MINILUX_FILES = [
 const AUTHORS = {
   LS: {
     name: "Lisa Strand",
-    role: "Chefredaktör, HemmaBioGuiden.se",
+    role: "Chefredaktör, miniprojektorrecensioner.se",
     expert: "Chefredaktör och hemmabioexpert",
     initials: "LS",
     av_class: "av-ls",
@@ -36,7 +36,7 @@ const AUTHORS = {
   },
   MK: {
     name: "Martin Kjell",
-    role: "Seniorskribent, HemmaBioGuiden.se",
+    role: "Seniorskribent, miniprojektorrecensioner.se",
     expert: "Teknikexpert och recensent",
     initials: "MK",
     av_class: "av-mk",
@@ -49,7 +49,7 @@ const AUTHORS = {
   },
   AN: {
     name: "Anders Nord",
-    role: "Skribent, HemmaBioGuiden.se",
+    role: "Skribent, miniprojektorrecensioner.se",
     expert: "Konsumentteknik och ljud",
     initials: "AN",
     av_class: "av-an",
@@ -106,7 +106,7 @@ function navHtml(active = null) {
   }).join("\n");
   return `<nav>
   <div class="nav-row1">
-    <a class="brand" href="index.html">HemmaBio<em>Guiden</em></a>
+    <a class="brand" href="index.html">miniprojektor<em>recensioner.se</em></a>
     <div class="nav-right">
       <a href="om-oss.html">Om oss</a>
       <a href="kontakt.html">Kontakt</a>
@@ -125,7 +125,7 @@ function footerHtml() {
   <div class="foot-wrap">
     <div class="foot-grid">
       <div>
-        <div class="foot-brand">HemmaBio<em>Guiden</em></div>
+        <div class="foot-brand">miniprojektor<em>recensioner.se</em></div>
         <p class="foot-desc">Oberoende blogg om hemmabio, projektorer och ljud sedan 2023. Vi testar och granskar utan koppling till någon butik eller tillverkare.</p>
       </div>
       <div class="foot-col">
@@ -142,7 +142,7 @@ ${cats}
       </div>
     </div>
     <div class="foot-bottom">
-      <p>&copy; 2026 HemmaBioGuiden.se · <a href="om-oss.html">Om oss</a> · <a href="kontakt.html">Kontakt</a> · <a href="integritetspolicy.html">Integritetspolicy</a></p>
+      <p>&copy; 2026 miniprojektorrecensioner.se · <a href="om-oss.html">Om oss</a> · <a href="kontakt.html">Kontakt</a> · <a href="integritetspolicy.html">Integritetspolicy</a></p>
       <p>Alla tester utförs utan ersättning från tillverkare</p>
     </div>
   </div>
@@ -332,7 +332,7 @@ function buildArticlePage(
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>${title} | HemmaBioGuiden.se</title>
+<title>${title} | miniprojektorrecensioner.se</title>
 <meta name="description" content="${description}"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
@@ -704,7 +704,7 @@ function buildCategoryPage(filename, title, navActive, desc, slugs) {
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>${title} | HemmaBioGuiden.se</title>
+<title>${title} | miniprojektorrecensioner.se</title>
 <meta name="description" content="${desc}"/>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
 <style>${indexCss()}</style>
@@ -762,16 +762,16 @@ function writeStaticPages() {
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Om oss | HemmaBioGuiden.se</title>
-<meta name="description" content="Om HemmaBioGuiden.se – oberoende hemmabio-blogg sedan 2023."/>
+<title>Om oss | miniprojektorrecensioner.se</title>
+<meta name="description" content="Om miniprojektorrecensioner.se – oberoende hemmabio-blogg sedan 2023."/>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet"/>
 <style>${indexCss()}</style>
 </head>
 <body>
 ${navHtml()}
 <div class="static-page">
-<h1>Om HemmaBioGuiden</h1>
-<p>HemmaBioGuiden.se grundades 2023 med ett enkelt uppdrag: ge svenska hem tydliga, oberoende svar på frågor om projektorer, ljud och streaming – utan butiksreklam eller betalda topplistor.</p>
+<h1>Om miniprojektorrecensioner.se</h1>
+<p>miniprojektorrecensioner.se grundades 2023 med ett enkelt uppdrag: ge svenska hem tydliga, oberoende svar på frågor om projektorer, ljud och streaming – utan butiksreklam eller betalda topplistor.</p>
 <p>Alla produkter vi recenserar köps med egna medel. Tillverkare och återförsäljare kan inte betala för placering. Om vi länkar till en butik är det för läsarens bekvämlighet; vi anger alltid om länken är sponsrad (vilket sällan sker).</p>
 <h2>Redaktionell policy</h2>
 <ul>
@@ -796,8 +796,8 @@ ${footerHtml()}
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Kontakt | HemmaBioGuiden.se</title>
-<meta name="description" content="Kontakta HemmaBioGuiden.se redaktion."/>
+<title>Kontakt | miniprojektorrecensioner.se</title>
+<meta name="description" content="Kontakta miniprojektorrecensioner.se redaktion."/>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet"/>
 <style>${indexCss()}</style>
 </head>
@@ -806,7 +806,7 @@ ${navHtml()}
 <div class="static-page">
 <h1>Kontakt</h1>
 <p>Har du frågor, tips om produkter att testa eller hittat ett faktafel? Hör av dig till redaktionen.</p>
-<p><strong>E-post:</strong> <a href="mailto:redaktion@hemmabioguidsen.se">redaktion@hemmabioguidsen.se</a></p>
+<p><strong>E-post:</strong> <a href="mailto:redaktion@miniprojektorrecensioner.se">redaktion@miniprojektorrecensioner.se</a></p>
 <p>Vi svarar vanligtvis inom 2–3 arbetsdagar. Vi tar inte emot beställningsrecensioner eller betalda topplaceringar.</p>
 <h2>Skicka meddelande</h2>
 <form action="#" method="post" onsubmit="return false;">
@@ -826,8 +826,8 @@ ${footerHtml()}
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Integritetspolicy | HemmaBioGuiden.se</title>
-<meta name="description" content="Integritetspolicy och GDPR för HemmaBioGuiden.se."/>
+<title>Integritetspolicy | miniprojektorrecensioner.se</title>
+<meta name="description" content="Integritetspolicy och GDPR för miniprojektorrecensioner.se."/>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet"/>
 <style>${indexCss()}</style>
 </head>
@@ -835,9 +835,9 @@ ${footerHtml()}
 ${navHtml()}
 <div class="static-page">
 <h1>Integritetspolicy</h1>
-<p>Gäller från 2023 och uppdaterad 2026. HemmaBioGuiden.se ('vi') värnar om din integritet enligt EU:s dataskyddsförordning (GDPR).</p>
+<p>Gäller från 2023 och uppdaterad 2026. miniprojektorrecensioner.se ('vi') värnar om din integritet enligt EU:s dataskyddsförordning (GDPR).</p>
 <h2>Personuppgiftsansvarig</h2>
-<p>HemmaBioGuiden.se, kontakt: <a href="mailto:redaktion@hemmabioguidsen.se">redaktion@hemmabioguidsen.se</a></p>
+<p>miniprojektorrecensioner.se, kontakt: <a href="mailto:redaktion@miniprojektorrecensioner.se">redaktion@miniprojektorrecensioner.se</a></p>
 <h2>Vilka uppgifter samlar vi in?</h2>
 <ul>
 <li>E-postadress om du prenumererar på nyhetsbrev (frivilligt)</li>
@@ -855,7 +855,7 @@ ${navHtml()}
 <h2>Dina rättigheter</h2>
 <p>Du har rätt till tillgång, rättelse, radering, begränsning, dataportabilitet och att invända mot behandling. Klaga till Integritetsskyddsmyndigheten (IMY) om du anser att vi bryter mot GDPR.</p>
 <h2>Kontakt</h2>
-<p>För integritetsfrågor: <a href="mailto:redaktion@hemmabioguidsen.se">redaktion@hemmabioguidsen.se</a></p>
+<p>För integritetsfrågor: <a href="mailto:redaktion@miniprojektorrecensioner.se">redaktion@miniprojektorrecensioner.se</a></p>
 </div>
 ${footerHtml()}
 </body>
@@ -914,7 +914,7 @@ function updateMiniluxNavFooter() {
 }
 
 function main() {
-  console.log("Generating HemmaBioGuiden.se...");
+  console.log("Generating miniprojektorrecensioner.se...");
   writeArticles();
   writeCategoryPages();
   writeStaticPages();
